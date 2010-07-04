@@ -14,3 +14,6 @@ The intention is to combine these operations into larger units of work, currentl
 Currently I am using this library in a cocoa project to experiment with this simple neural network.
 Other neural network implementations are intended in the future when I get some more time to play.
 
+The CxdNNTrainer provides a user interface that can be used to train the neural net. 
+This UI uses the CorePlot framework to plot the error curve CorePlot is available from http://code.google.com/p/core-plot/
+

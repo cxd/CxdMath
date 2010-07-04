@@ -32,7 +32,6 @@
 		62E1E3BE117B19D0009733AF /* armadillo_itpp in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E3BD117B19D0009733AF /* armadillo_itpp */; };
 		62E1E3CC117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */; };
 		62F5B229119E7BE900545D49 /* libCDGraph.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F5B228119E7BE900545D49 /* libCDGraph.dylib */; };
-		62F5B28A119E7DF700545D49 /* libCDGraph.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62F5B21B119E7B5800545D49 /* libCDGraph.dylib */; };
 		62F826F911AE8CD40009C16B /* ErrorPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
@@ -70,39 +69,39 @@
 			remoteGlobalIDString = 620FF12611704C590024C9E4;
 			remoteInfo = CxdTestRunner;
 		};
-		62F5B21A119E7B5800545D49 /* PBXContainerItemProxy */ = {
+		6264ADF411E0A050007541B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC0C705546C1D00DB518D;
+			remoteGlobalIDString = D2AAC0C705546C1D00DB518D /* libCDGraph.dylib */;
 			remoteInfo = CdADT;
 		};
-		62F5B21C119E7B5800545D49 /* PBXContainerItemProxy */ = {
+		6264ADF611E0A050007541B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 62E9DB720EEA78BE00DCE36C;
+			remoteGlobalIDString = 62E9DB720EEA78BE00DCE36C /* CDGraphTest.octest */;
 			remoteInfo = CDGraphTest;
 		};
-		62F5B21E119E7B5800545D49 /* PBXContainerItemProxy */ = {
+		6264ADF811E0A050007541B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 626F3A1B0F248AA100F566C4;
+			remoteGlobalIDString = 626F3A1B0F248AA100F566C4 /* libCDGraphStatic.a */;
 			remoteInfo = CDGraphStatic;
 		};
-		62F5B220119E7B5800545D49 /* PBXContainerItemProxy */ = {
+		6264ADFA11E0A050007541B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 626F3A850F24915700F566C4;
+			remoteGlobalIDString = 626F3A850F24915700F566C4 /* CDGraphTestConsole */;
 			remoteInfo = CDGraphTestConsole;
 		};
-		62F5B222119E7B5800545D49 /* PBXContainerItemProxy */ = {
+		6264ADFC11E0A050007541B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 62B545850F3D8A410027ED8F;
+			remoteGlobalIDString = 62B545850F3D8A410027ED8F /* CDGraph.framework */;
 			remoteInfo = CDGraph;
 		};
 /* End PBXContainerItemProxy section */
@@ -125,7 +124,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				62F5B28A119E7DF700545D49 /* libCDGraph.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +166,7 @@
 		6248C57B117DC3C400204A78 /* ProjectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectItem.h; sourceTree = "<group>"; };
 		6248C57C117DC3C400204A78 /* ProjectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectItem.m; sourceTree = "<group>"; };
 		6248C58F117DC51A00204A78 /* ProjectItemType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectItemType.h; sourceTree = "<group>"; };
+		6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CDGraph.xcodeproj; path = ../CDGraph/CDGraph.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6288440C11A802BC0030533C /* NetworkTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTrainer.h; sourceTree = "<group>"; };
 		6288440D11A802BC0030533C /* NetworkTrainer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkTrainer.mm; sourceTree = "<group>"; };
 		628D0C1F118EE9BA00EE6596 /* NetTrainResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetTrainResource.h; path = Model/NetTrainResource.h; sourceTree = "<group>"; };
@@ -185,7 +184,6 @@
 		62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = CxdNetTrainerModel.xcdatamodel; sourceTree = "<group>"; };
 		62E1E3F8117B246F009733AF /* CxdTrainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdTrainerModel.h; sourceTree = "<group>"; };
 		62E1E3F9117B2495009733AF /* CxdNetTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdNetTrainer.h; sourceTree = "<group>"; };
-		62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CDGraph.xcodeproj; path = ../../CDGraph/CDGraph/CDGraph.xcodeproj; sourceTree = SOURCE_ROOT; };
 		62F5B228119E7BE900545D49 /* libCDGraph.dylib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCDGraph.dylib; path = /Users/cd/Projects/CDGraph/CDGraph/build/Debug/libCDGraph.dylib; sourceTree = "<absolute>"; };
 		62F826F711AE8CD40009C16B /* ErrorPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorPlotDataSource.h; sourceTree = "<group>"; };
 		62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorPlotDataSource.m; sourceTree = "<group>"; };
@@ -375,6 +373,18 @@
 			name = ProjectView;
 			sourceTree = "<group>";
 		};
+		6264ADE611E0A050007541B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6264ADF511E0A050007541B6 /* libCDGraph.dylib */,
+				6264ADF711E0A050007541B6 /* CDGraphTest.octest */,
+				6264ADF911E0A050007541B6 /* libCDGraphStatic.a */,
+				6264ADFB11E0A050007541B6 /* CDGraphTestConsole */,
+				6264ADFD11E0A050007541B6 /* CDGraph.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6288440B11A8028A0030533C /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,7 +409,7 @@
 		62A18267119E765900AF2CD1 /* CDGraph */ = {
 			isa = PBXGroup;
 			children = (
-				62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */,
+				6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */,
 			);
 			name = CDGraph;
 			sourceTree = "<group>";
@@ -423,18 +433,6 @@
 				62E1E3F8117B246F009733AF /* CxdTrainerModel.h */,
 			);
 			name = DataModel;
-			sourceTree = "<group>";
-		};
-		62F5B20C119E7B5800545D49 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				62F5B21B119E7B5800545D49 /* libCDGraph.dylib */,
-				62F5B21D119E7B5800545D49 /* CDGraphTest.octest */,
-				62F5B21F119E7B5800545D49 /* libCDGraphStatic.a */,
-				62F5B221119E7B5800545D49 /* CDGraphTestConsole */,
-				62F5B223119E7B5800545D49 /* CDGraph.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,8 +473,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 62F5B20C119E7B5800545D49 /* Products */;
-					ProjectRef = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+					ProductGroup = 6264ADE611E0A050007541B6 /* Products */;
+					ProjectRef = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 				},
 				{
 					ProductGroup = 6210013E11A9576500224ABB /* Products */;
@@ -523,39 +521,39 @@
 			remoteRef = 6217527111DCB0FA005D7D9B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		62F5B21B119E7B5800545D49 /* libCDGraph.dylib */ = {
+		6264ADF511E0A050007541B6 /* libCDGraph.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libCDGraph.dylib;
-			remoteRef = 62F5B21A119E7B5800545D49 /* PBXContainerItemProxy */;
+			remoteRef = 6264ADF411E0A050007541B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		62F5B21D119E7B5800545D49 /* CDGraphTest.octest */ = {
+		6264ADF711E0A050007541B6 /* CDGraphTest.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CDGraphTest.octest;
-			remoteRef = 62F5B21C119E7B5800545D49 /* PBXContainerItemProxy */;
+			remoteRef = 6264ADF611E0A050007541B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		62F5B21F119E7B5800545D49 /* libCDGraphStatic.a */ = {
+		6264ADF911E0A050007541B6 /* libCDGraphStatic.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCDGraphStatic.a;
-			remoteRef = 62F5B21E119E7B5800545D49 /* PBXContainerItemProxy */;
+			remoteRef = 6264ADF811E0A050007541B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		62F5B221119E7B5800545D49 /* CDGraphTestConsole */ = {
+		6264ADFB11E0A050007541B6 /* CDGraphTestConsole */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CDGraphTestConsole;
-			remoteRef = 62F5B220119E7B5800545D49 /* PBXContainerItemProxy */;
+			remoteRef = 6264ADFA11E0A050007541B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		62F5B223119E7B5800545D49 /* CDGraph.framework */ = {
+		6264ADFD11E0A050007541B6 /* CDGraph.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CDGraph.framework;
-			remoteRef = 62F5B222119E7B5800545D49 /* PBXContainerItemProxy */;
+			remoteRef = 6264ADFC11E0A050007541B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -2,3 +2,5 @@ CxdMatrix/build/*
 CxdMatrix/build/*/*
 CxdNNTrainer/build/*
 CxdNNTrainer/build/*/*
+CDGraph/build/*
+CDGraph/build/*/*

@@ -1,0 +1,16 @@
+CxdMath
+cd@cpd.id.au
+==========
+git@github.com:cxd/CxdMath.git
+==========
+
+A collection of matrix operations based on the arma::matrix library.
+
+The Armadillo library is located at:
+http://arma.sourceforge.net/
+
+The CxdMath library provides some simple "Matrix" operations.
+The intention is to combine these operations into larger units of work, currently the library has only one example of this being the McCullochPittsNeuralNetwork.
+Currently I am using this library in a cocoa project to experiment with this simple neural network.
+Other neural network implementations are intended in the future when I get some more time to play.
+

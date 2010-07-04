@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
+		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		6207F44311859FF2009295CD /* RawDataPropertyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6207F44211859FF2009295CD /* RawDataPropertyData.m */; };
+		6210AACF11ABED7000139C9B /* NetworkProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210AACE11ABED7000139C9B /* NetworkProperties.m */; };
+		6210AAE911ABEE5100139C9B /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6210AAE811ABEE5100139C9B /* CorePlot.framework */; };
+		6210AAEB11ABEE5700139C9B /* CorePlot.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6210AAE811ABEE5100139C9B /* CorePlot.framework */; };
+		6210AAFE11ABEE9500139C9B /* TrainErrorCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210AAFD11ABEE9500139C9B /* TrainErrorCurve.m */; };
+		6213CCE31184090D00640E42 /* ProjectTreeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6213CCE21184090D00640E42 /* ProjectTreeDelegate.m */; };
+		621544D111B916C100E52008 /* NetTrainProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 621544D011B916C100E52008 /* NetTrainProjectConfig.m */; };
+		6217527611DCB134005D7D9B /* libCxdMatrix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6217527511DCB134005D7D9B /* libCxdMatrix.dylib */; };
+		6220D25D11969B8700078A5E /* DataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6220D25C11969B8700078A5E /* DataView.m */; };
+		6248C551117DC07E00204A78 /* ProjectTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6248C550117DC07E00204A78 /* ProjectTreeView.m */; };
+		6248C554117DC1B500204A78 /* ProjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6248C553117DC1B500204A78 /* ProjectView.m */; };
+		6248C57D117DC3C400204A78 /* ProjectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6248C57C117DC3C400204A78 /* ProjectItem.m */; };
+		6288440E11A802BC0030533C /* NetworkTrainer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6288440D11A802BC0030533C /* NetworkTrainer.mm */; };
+		628D0C23118EE9BA00EE6596 /* NetTrainResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 628D0C20118EE9BA00EE6596 /* NetTrainResource.m */; };
+		6298377B119530DD004F87FF /* ProjectNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 6298377A119530DD004F87FF /* ProjectNotifications.m */; };
+		62985A1F11957661004F87FF /* DataViewDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62985A1E11957661004F87FF /* DataViewDelegate.mm */; };
+		62E1C265117B1968009733AF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1C264117B1968009733AF /* Accelerate.framework */; };
+		62E1E2E4117B19B7009733AF /* boost in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1C266117B19B5009733AF /* boost */; };
+		62E1E2E6117B19D0009733AF /* armadillo in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E2E5117B19D0009733AF /* armadillo */; };
+		62E1E3BC117B19D0009733AF /* armadillo_bits in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E2E7117B19D0009733AF /* armadillo_bits */; };
+		62E1E3BE117B19D0009733AF /* armadillo_itpp in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E3BD117B19D0009733AF /* armadillo_itpp */; };
+		62E1E3CC117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */; };
+		62F5B229119E7BE900545D49 /* libCDGraph.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F5B228119E7BE900545D49 /* libCDGraph.dylib */; };
+		62F5B28A119E7DF700545D49 /* libCDGraph.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62F5B21B119E7B5800545D49 /* libCDGraph.dylib */; };
+		62F826F911AE8CD40009C16B /* ErrorPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */; };
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC310486D014006FF6A4 /* MyDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.mm */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6210014311A9576500224ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6210013D11A9576500224ABB /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = CorePlot;
+		};
+		6210014511A9576500224ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6210013D11A9576500224ABB /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0730F600109492D800E95162;
+			remoteInfo = UnitTests;
+		};
+		6217526F11DCB0FA005D7D9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6217526A11DCB0FA005D7D9B /* CxdMatrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC09D05546B4700DB518D;
+			remoteInfo = CxdMatrix;
+		};
+		6217527111DCB0FA005D7D9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6217526A11DCB0FA005D7D9B /* CxdMatrix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 620FF12611704C590024C9E4;
+			remoteInfo = CxdTestRunner;
+		};
+		62F5B21A119E7B5800545D49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC0C705546C1D00DB518D;
+			remoteInfo = CdADT;
+		};
+		62F5B21C119E7B5800545D49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 62E9DB720EEA78BE00DCE36C;
+			remoteInfo = CDGraphTest;
+		};
+		62F5B21E119E7B5800545D49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 626F3A1B0F248AA100F566C4;
+			remoteInfo = CDGraphStatic;
+		};
+		62F5B220119E7B5800545D49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 626F3A850F24915700F566C4;
+			remoteInfo = CDGraphTestConsole;
+		};
+		62F5B222119E7B5800545D49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 62B545850F3D8A410027ED8F;
+			remoteInfo = CDGraph;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6210AAEA11ABEE5100139C9B /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6210AAEB11ABEE5700139C9B /* CorePlot.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62F5B28F119E7DFC00545D49 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				62F5B28A119E7DF700545D49 /* libCDGraph.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
+		1DDD582B0DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2564AD2C0F5327BB00F57823 /* CxdNNTrainer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdNNTrainer_Prefix.pch; sourceTree = "<group>"; };
+		2A37F4ACFDCFA73011CA2CEA /* MyDocument.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDocument.mm; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		6207F44111859FF2009295CD /* RawDataPropertyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawDataPropertyData.h; sourceTree = "<group>"; };
+		6207F44211859FF2009295CD /* RawDataPropertyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawDataPropertyData.m; sourceTree = "<group>"; };
+		6210013D11A9576500224ABB /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = "../../CorePlot/core-plot/framework/CorePlot.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		6210AACD11ABED7000139C9B /* NetworkProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkProperties.h; sourceTree = "<group>"; };
+		6210AACE11ABED7000139C9B /* NetworkProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkProperties.m; sourceTree = "<group>"; };
+		6210AAE811ABEE5100139C9B /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = "/Users/cd/Projects/CorePlot/core-plot/framework/build/Debug/CorePlot.framework"; sourceTree = "<absolute>"; };
+		6210AAFC11ABEE9500139C9B /* TrainErrorCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainErrorCurve.h; sourceTree = "<group>"; };
+		6210AAFD11ABEE9500139C9B /* TrainErrorCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainErrorCurve.m; sourceTree = "<group>"; };
+		6213CCE11184090D00640E42 /* ProjectTreeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTreeDelegate.h; sourceTree = "<group>"; };
+		6213CCE21184090D00640E42 /* ProjectTreeDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTreeDelegate.m; sourceTree = "<group>"; };
+		621544CF11B916C100E52008 /* NetTrainProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetTrainProjectConfig.h; path = Model/NetTrainProjectConfig.h; sourceTree = "<group>"; };
+		621544D011B916C100E52008 /* NetTrainProjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetTrainProjectConfig.m; path = Model/NetTrainProjectConfig.m; sourceTree = "<group>"; };
+		6217526A11DCB0FA005D7D9B /* CxdMatrix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CxdMatrix.xcodeproj; path = ../CxdMatrix/CxdMatrix.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6217527511DCB134005D7D9B /* libCxdMatrix.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCxdMatrix.dylib; path = /Users/cd/Projects/Math/CxdMatrix/build/Debug/libCxdMatrix.dylib; sourceTree = "<absolute>"; };
+		6220D25B11969B8700078A5E /* DataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataView.h; sourceTree = "<group>"; };
+		6220D25C11969B8700078A5E /* DataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataView.m; sourceTree = "<group>"; };
+		6220D25E11969D9800078A5E /* IDataViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDataViewDelegate.h; sourceTree = "<group>"; };
+		6248C54F117DC07E00204A78 /* ProjectTreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTreeView.h; sourceTree = "<group>"; };
+		6248C550117DC07E00204A78 /* ProjectTreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTreeView.m; sourceTree = "<group>"; };
+		6248C552117DC1B500204A78 /* ProjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectView.h; sourceTree = "<group>"; };
+		6248C553117DC1B500204A78 /* ProjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectView.m; sourceTree = "<group>"; };
+		6248C57B117DC3C400204A78 /* ProjectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectItem.h; sourceTree = "<group>"; };
+		6248C57C117DC3C400204A78 /* ProjectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectItem.m; sourceTree = "<group>"; };
+		6248C58F117DC51A00204A78 /* ProjectItemType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectItemType.h; sourceTree = "<group>"; };
+		6288440C11A802BC0030533C /* NetworkTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTrainer.h; sourceTree = "<group>"; };
+		6288440D11A802BC0030533C /* NetworkTrainer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkTrainer.mm; sourceTree = "<group>"; };
+		628D0C1F118EE9BA00EE6596 /* NetTrainResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetTrainResource.h; path = Model/NetTrainResource.h; sourceTree = "<group>"; };
+		628D0C20118EE9BA00EE6596 /* NetTrainResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetTrainResource.m; path = Model/NetTrainResource.m; sourceTree = "<group>"; };
+		62983779119530DD004F87FF /* ProjectNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectNotifications.h; sourceTree = "<group>"; };
+		6298377A119530DD004F87FF /* ProjectNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectNotifications.m; sourceTree = "<group>"; };
+		6298379111953336004F87FF /* InitialiseProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialiseProjectConfig.h; sourceTree = "<group>"; };
+		62985A1D11957661004F87FF /* DataViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewDelegate.h; sourceTree = "<group>"; };
+		62985A1E11957661004F87FF /* DataViewDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DataViewDelegate.mm; sourceTree = "<group>"; };
+		62E1C264117B1968009733AF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		62E1C266117B19B5009733AF /* boost */ = {isa = PBXFileReference; lastKnownFileType = folder; name = boost; path = /usr/local/boost_1_42_0/boost; sourceTree = "<absolute>"; };
+		62E1E2E5117B19D0009733AF /* armadillo */ = {isa = PBXFileReference; lastKnownFileType = text; name = armadillo; path = /usr/include/armadillo; sourceTree = "<absolute>"; };
+		62E1E2E7117B19D0009733AF /* armadillo_bits */ = {isa = PBXFileReference; lastKnownFileType = folder; name = armadillo_bits; path = /usr/include/armadillo_bits; sourceTree = "<absolute>"; };
+		62E1E3BD117B19D0009733AF /* armadillo_itpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = armadillo_itpp; path = /usr/include/armadillo_itpp; sourceTree = "<absolute>"; };
+		62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = CxdNetTrainerModel.xcdatamodel; sourceTree = "<group>"; };
+		62E1E3F8117B246F009733AF /* CxdTrainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdTrainerModel.h; sourceTree = "<group>"; };
+		62E1E3F9117B2495009733AF /* CxdNetTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdNetTrainer.h; sourceTree = "<group>"; };
+		62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CDGraph.xcodeproj; path = ../../CDGraph/CDGraph/CDGraph.xcodeproj; sourceTree = SOURCE_ROOT; };
+		62F5B228119E7BE900545D49 /* libCDGraph.dylib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCDGraph.dylib; path = /Users/cd/Projects/CDGraph/CDGraph/build/Debug/libCDGraph.dylib; sourceTree = "<absolute>"; };
+		62F826F711AE8CD40009C16B /* ErrorPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorPlotDataSource.h; sourceTree = "<group>"; };
+		62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorPlotDataSource.m; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* CxdNNTrainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CxdNNTrainer-Info.plist"; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* CxdNNTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CxdNNTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				62E1C265117B1968009733AF /* Accelerate.framework in Frameworks */,
+				62E1E2E4117B19B7009733AF /* boost in Frameworks */,
+				62E1E2E6117B19D0009733AF /* armadillo in Frameworks */,
+				62E1E3BC117B19D0009733AF /* armadillo_bits in Frameworks */,
+				62E1E3BE117B19D0009733AF /* armadillo_itpp in Frameworks */,
+				62F5B229119E7BE900545D49 /* libCDGraph.dylib in Frameworks */,
+				6210AAE911ABEE5100139C9B /* CorePlot.framework in Frameworks */,
+				6217527611DCB134005D7D9B /* libCxdMatrix.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				62E1C264117B1968009733AF /* Accelerate.framework */,
+				62E1C266117B19B5009733AF /* boost */,
+				62E1E2E5117B19D0009733AF /* armadillo */,
+				62E1E2E7117B19D0009733AF /* armadillo_bits */,
+				62E1E3BD117B19D0009733AF /* armadillo_itpp */,
+				62F5B228119E7BE900545D49 /* libCDGraph.dylib */,
+				6210AAE811ABEE5100139C9B /* CorePlot.framework */,
+				6217527511DCB134005D7D9B /* libCxdMatrix.dylib */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* CxdNNTrainer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* CxdNNTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				6210013C11A9573E00224ABB /* CorePlot */,
+				62A18268119E766100AF2CD1 /* CxdMatrix */,
+				62A18267119E765900AF2CD1 /* CDGraph */,
+				62E1E3CA117B1E2E009733AF /* DataModel */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = CxdNNTrainer;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6210AAFB11ABEE7C00139C9B /* Graph */,
+				6288440B11A8028A0030533C /* Network */,
+				62985A1C11957647004F87FF /* Data */,
+				6207F43B1185995A009295CD /* ProjectProperties */,
+				6248C54E117DC05000204A78 /* ProjectView */,
+				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MyDocument.mm */,
+				62E1E3F9117B2495009733AF /* CxdNetTrainer.h */,
+				62983779119530DD004F87FF /* ProjectNotifications.h */,
+				6298377A119530DD004F87FF /* ProjectNotifications.m */,
+				6298379111953336004F87FF /* InitialiseProjectConfig.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2564AD2C0F5327BB00F57823 /* CxdNNTrainer_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				8D15AC360486D014006FF6A4 /* CxdNNTrainer-Info.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
+				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6207F43B1185995A009295CD /* ProjectProperties */ = {
+			isa = PBXGroup;
+			children = (
+				6207F44111859FF2009295CD /* RawDataPropertyData.h */,
+				6207F44211859FF2009295CD /* RawDataPropertyData.m */,
+				6210AACD11ABED7000139C9B /* NetworkProperties.h */,
+				6210AACE11ABED7000139C9B /* NetworkProperties.m */,
+			);
+			name = ProjectProperties;
+			sourceTree = "<group>";
+		};
+		6210013C11A9573E00224ABB /* CorePlot */ = {
+			isa = PBXGroup;
+			children = (
+				6210013D11A9576500224ABB /* CorePlot.xcodeproj */,
+			);
+			name = CorePlot;
+			sourceTree = "<group>";
+		};
+		6210013E11A9576500224ABB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6210014411A9576500224ABB /* CorePlot.framework */,
+				6210014611A9576500224ABB /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6210AAFB11ABEE7C00139C9B /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				6210AAFC11ABEE9500139C9B /* TrainErrorCurve.h */,
+				6210AAFD11ABEE9500139C9B /* TrainErrorCurve.m */,
+				62F826F711AE8CD40009C16B /* ErrorPlotDataSource.h */,
+				62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */,
+			);
+			name = Graph;
+			sourceTree = "<group>";
+		};
+		6217526B11DCB0FA005D7D9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6217527011DCB0FA005D7D9B /* libCxdMatrix.dylib */,
+				6217527211DCB0FA005D7D9B /* CxdTestRunner */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6248C54E117DC05000204A78 /* ProjectView */ = {
+			isa = PBXGroup;
+			children = (
+				6248C54F117DC07E00204A78 /* ProjectTreeView.h */,
+				6248C550117DC07E00204A78 /* ProjectTreeView.m */,
+				6248C552117DC1B500204A78 /* ProjectView.h */,
+				6248C553117DC1B500204A78 /* ProjectView.m */,
+				6248C57B117DC3C400204A78 /* ProjectItem.h */,
+				6248C57C117DC3C400204A78 /* ProjectItem.m */,
+				6248C58F117DC51A00204A78 /* ProjectItemType.h */,
+				6213CCE11184090D00640E42 /* ProjectTreeDelegate.h */,
+				6213CCE21184090D00640E42 /* ProjectTreeDelegate.m */,
+			);
+			name = ProjectView;
+			sourceTree = "<group>";
+		};
+		6288440B11A8028A0030533C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6288440C11A802BC0030533C /* NetworkTrainer.h */,
+				6288440D11A802BC0030533C /* NetworkTrainer.mm */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		62985A1C11957647004F87FF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				62985A1D11957661004F87FF /* DataViewDelegate.h */,
+				62985A1E11957661004F87FF /* DataViewDelegate.mm */,
+				6220D25B11969B8700078A5E /* DataView.h */,
+				6220D25C11969B8700078A5E /* DataView.m */,
+				6220D25E11969D9800078A5E /* IDataViewDelegate.h */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		62A18267119E765900AF2CD1 /* CDGraph */ = {
+			isa = PBXGroup;
+			children = (
+				62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */,
+			);
+			name = CDGraph;
+			sourceTree = "<group>";
+		};
+		62A18268119E766100AF2CD1 /* CxdMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				6217526A11DCB0FA005D7D9B /* CxdMatrix.xcodeproj */,
+			);
+			name = CxdMatrix;
+			sourceTree = "<group>";
+		};
+		62E1E3CA117B1E2E009733AF /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				621544CF11B916C100E52008 /* NetTrainProjectConfig.h */,
+				621544D011B916C100E52008 /* NetTrainProjectConfig.m */,
+				628D0C1F118EE9BA00EE6596 /* NetTrainResource.h */,
+				628D0C20118EE9BA00EE6596 /* NetTrainResource.m */,
+				62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */,
+				62E1E3F8117B246F009733AF /* CxdTrainerModel.h */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		62F5B20C119E7B5800545D49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62F5B21B119E7B5800545D49 /* libCDGraph.dylib */,
+				62F5B21D119E7B5800545D49 /* CDGraphTest.octest */,
+				62F5B21F119E7B5800545D49 /* libCDGraphStatic.a */,
+				62F5B221119E7B5800545D49 /* CDGraphTestConsole */,
+				62F5B223119E7B5800545D49 /* CDGraph.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* CxdNNTrainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "CxdNNTrainer" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				62F5B28F119E7DFC00545D49 /* CopyFiles */,
+				6210AAEA11ABEE5100139C9B /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CxdNNTrainer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CxdNNTrainer;
+			productReference = 8D15AC370486D014006FF6A4 /* CxdNNTrainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "CxdNNTrainer" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* CxdNNTrainer */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 62F5B20C119E7B5800545D49 /* Products */;
+					ProjectRef = 62F5B20B119E7B5800545D49 /* CDGraph.xcodeproj */;
+				},
+				{
+					ProductGroup = 6210013E11A9576500224ABB /* Products */;
+					ProjectRef = 6210013D11A9576500224ABB /* CorePlot.xcodeproj */;
+				},
+				{
+					ProductGroup = 6217526B11DCB0FA005D7D9B /* Products */;
+					ProjectRef = 6217526A11DCB0FA005D7D9B /* CxdMatrix.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* CxdNNTrainer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6210014411A9576500224ABB /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 6210014311A9576500224ABB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6210014611A9576500224ABB /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = 6210014511A9576500224ABB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6217527011DCB0FA005D7D9B /* libCxdMatrix.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libCxdMatrix.dylib;
+			remoteRef = 6217526F11DCB0FA005D7D9B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6217527211DCB0FA005D7D9B /* CxdTestRunner */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CxdTestRunner;
+			remoteRef = 6217527111DCB0FA005D7D9B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		62F5B21B119E7B5800545D49 /* libCDGraph.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libCDGraph.dylib;
+			remoteRef = 62F5B21A119E7B5800545D49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		62F5B21D119E7B5800545D49 /* CDGraphTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CDGraphTest.octest;
+			remoteRef = 62F5B21C119E7B5800545D49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		62F5B21F119E7B5800545D49 /* libCDGraphStatic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCDGraphStatic.a;
+			remoteRef = 62F5B21E119E7B5800545D49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		62F5B221119E7B5800545D49 /* CDGraphTestConsole */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CDGraphTestConsole;
+			remoteRef = 62F5B220119E7B5800545D49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		62F5B223119E7B5800545D49 /* CDGraph.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CDGraph.framework;
+			remoteRef = 62F5B222119E7B5800545D49 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
+				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* MyDocument.mm in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				62E1E3CC117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel in Sources */,
+				6248C551117DC07E00204A78 /* ProjectTreeView.m in Sources */,
+				6248C554117DC1B500204A78 /* ProjectView.m in Sources */,
+				6248C57D117DC3C400204A78 /* ProjectItem.m in Sources */,
+				6213CCE31184090D00640E42 /* ProjectTreeDelegate.m in Sources */,
+				6207F44311859FF2009295CD /* RawDataPropertyData.m in Sources */,
+				628D0C23118EE9BA00EE6596 /* NetTrainResource.m in Sources */,
+				6298377B119530DD004F87FF /* ProjectNotifications.m in Sources */,
+				62985A1F11957661004F87FF /* DataViewDelegate.mm in Sources */,
+				6220D25D11969B8700078A5E /* DataView.m in Sources */,
+				6288440E11A802BC0030533C /* NetworkTrainer.mm in Sources */,
+				6210AACF11ABED7000139C9B /* NetworkProperties.m in Sources */,
+				6210AAFE11ABEE9500139C9B /* TrainErrorCurve.m in Sources */,
+				62F826F911AE8CD40009C16B /* ErrorPlotDataSource.m in Sources */,
+				621544D111B916C100E52008 /* NetTrainProjectConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58280DA1D0D100B32029 /* MyDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58290DA1D0D100B32029 /* English */,
+			);
+			name = MyDocument.xib;
+			sourceTree = "<group>";
+		};
+		1DDD582A0DA1D0D100B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD582B0DA1D0D100B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C05733C808A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/../../CDGraph/CDGraph/build/Debug\"",
+					"\"$(SRCROOT)/../../CorePlot/core-plot/framework/build/Debug\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = 4.0;
+				HEADER_SEARCH_PATHS = (
+					../CxdMatrix/,
+					../../CDGraph/CDGraph/,
+					/usr/local/armadillo/usr/include,
+					/usr/local/boost_1_42_0/,
+					/usr/local/boost_1_42_0/boost,
+				);
+				INFOPLIST_FILE = "CxdNNTrainer-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"\"/usr/local/boost_1_42_0/bin.v2/libs/date_time/build/darwin-4.2.1/release/threading-multi\"",
+					/usr/local/boost_1_42_0/bin.v2/libs,
+					"\"$(SRCROOT)/../../CDGraph/CDGraph/build/Debug\"",
+					"\"$(SRCROOT)/../CxdMatrix/build/Debug\"",
+				);
+				PRODUCT_NAME = CxdNNTrainer;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C05733C908A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../CDGraph/CDGraph/build/Debug\"",
+					"\"$(SRCROOT)/../../CorePlot/core-plot/framework/build/Debug\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CxdNNTrainer_Prefix.pch;
+				INFOPLIST_FILE = "CxdNNTrainer-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../CDGraph/CDGraph/build/Debug\"",
+					"\"$(SRCROOT)/../CxdMatrix/build/Debug\"",
+				);
+				PRODUCT_NAME = CxdNNTrainer;
+			};
+			name = Release;
+		};
+		C05733CC08A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C05733CD08A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "CxdNNTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733C808A9546B00998B17 /* Debug */,
+				C05733C908A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "CxdNNTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733CC08A9546B00998B17 /* Debug */,
+				C05733CD08A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

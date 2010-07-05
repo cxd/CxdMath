@@ -175,7 +175,8 @@
 	
 	
 	NSNumber *max = [self.dataSource maxYValue];
-	NSNumber *axisY = [NSNumber numberWithDouble:([max doubleValue] + 10.0)];
+	// enough room for the axis to appear on the screen.
+	NSNumber *axisY = [NSNumber numberWithDouble:([max doubleValue] + 25.0)];
 	
 	CPXYPlotSpace *plotSpace = (CPXYPlotSpace *)graph.defaultPlotSpace;
 	

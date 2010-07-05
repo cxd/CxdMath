@@ -279,96 +279,76 @@
 		addObserver:self
 	 selector:@selector(onProjectNameUpdated:) 
 	 name:ProjectNameEditNotification 
-	 object:nil];
+	 object:projectTree];
 	
 	// file resource events.
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onFilePathChange:) 
 	 name:RawDataFilePathNotification 
-	 object:nil];
+	 object:projectTree];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onFilePathChange:) 
 	 name:TargetDataFilePathNotification 
-	 object:nil];
+	 object:projectTree];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onFilePathChange:) 
 	 name:TrainDataFilePathNotification 
-	 object:nil];
+	 object:projectTree];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onFilePathChange:) 
 	 name:NetworkBaseFilePathNotification 
-	 object:nil];
+	 object:projectTree];
 	
 	// subscribe to targets change values.
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onTargetColumnChange:)
 	 name:TargetColumnEditNotification
-	 object:nil];
+	 object:rawDataProperty];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onTargetColumnChange:)
 	 name:EndTargetColumnEditNotification
-	 object:nil];
+	 object:rawDataProperty];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onTargetColumnChange:)
 	 name:TargetContinuousEditNotification
-	 object:nil];
+	 object:rawDataProperty];
 	
-	[[NSNotificationCenter defaultCenter]
-	 addObserver:self
-	 selector:@selector(onNetworkTrainFinish:) 
-	 name:NetworkTrainFinished 
-	 object:nil];
-	
-	
-	[[NSNotificationCenter defaultCenter]
-	 addObserver:self
-	 selector:@selector(onNetworkTestFinish:) 
-	 name:NetworkTestFinished 
-	 object:nil];
-	
-	
-	[[NSNotificationCenter defaultCenter]
-	 addObserver:self
-	 selector:@selector(onErrorSignal:) 
-	 name:NetworkErrorSignal 
-	 object:nil];
-	
-	
+		
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onNetworkPropertyChange:) 
 	 name:TrainEpochsEditNotification
-	 object:nil];
+	 object:netProperty];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onNetworkPropertyChange:) 
 	 name:TrainLearnRateEditNotification
-	 object:nil];
+	 object:netProperty];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onNetworkPropertyChange:) 
 	 name:TrainBiasEditNotification
-	 object:nil];
+	 object:netProperty];
 	
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(onNetworkPropertyChange:) 
 	 name:TrainMomentumEditNotification
-	 object:nil];
+	 object:netProperty];
 }
 
 
@@ -582,7 +562,7 @@
 	NSString* networkFile = [self.networkResource valueForKey:@"location"];
 	
 	self.accuracy = 0.0;
-	
+	BOOL init = NO;
 	if ( (trainer == nil) && (networkFile != nil) && ([networkFile length] != 0) )
 	{
 		trainer = [[NetworkTrainer alloc] initWithFile:networkFile
@@ -602,11 +582,36 @@
 													   bias:[bias doubleValue]];
 		[trainer retain];
 	} else {
+		init = YES;
 	[trainer setNetAttributeLearnRate:[learnRate doubleValue] 
 							 momentum:[momentum doubleValue] 
 								 bias:[bias doubleValue]];	
 		
 	}
+	
+	// attach notifications to instance.
+	if (!init) {
+		[[NSNotificationCenter defaultCenter]
+		 addObserver:self
+		 selector:@selector(onNetworkTrainFinish:) 
+		 name:NetworkTrainFinished 
+		 object:trainer];
+	
+	
+		[[NSNotificationCenter defaultCenter]
+		 addObserver:self
+		 selector:@selector(onNetworkTestFinish:) 
+		 name:NetworkTestFinished 
+		 object:trainer];
+	
+	
+		[[NSNotificationCenter defaultCenter]
+		 addObserver:self
+		 selector:@selector(onErrorSignal:) 
+		 name:NetworkErrorSignal 
+		 object:trainer];
+	}
+	
 	
 	if (self.progressBar != nil)
 	{

@@ -241,7 +241,7 @@ private:
 	if (errMat.n_rows == 0)
 		return;
 	
-	std::cout << "Error Signal " << std::endl << errMat << std::endl;
+	//std::cout << "Error Signal " << std::endl << errMat << std::endl;
 	
 	double n = errMat(0,0);
 	

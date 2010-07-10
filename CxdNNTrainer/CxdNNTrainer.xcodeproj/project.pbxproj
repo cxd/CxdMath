@@ -29,7 +29,6 @@
 		62E1E2E4117B19B7009733AF /* boost in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1C266117B19B5009733AF /* boost */; };
 		62E1E2E6117B19D0009733AF /* armadillo in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E2E5117B19D0009733AF /* armadillo */; };
 		62E1E3BC117B19D0009733AF /* armadillo_bits in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E2E7117B19D0009733AF /* armadillo_bits */; };
-		62E1E3BE117B19D0009733AF /* armadillo_itpp in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E3BD117B19D0009733AF /* armadillo_itpp */; };
 		62E1E3CC117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */; };
 		62F5B229119E7BE900545D49 /* libCDGraph.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F5B228119E7BE900545D49 /* libCDGraph.dylib */; };
 		62F826F911AE8CD40009C16B /* ErrorPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */; };
@@ -180,7 +179,6 @@
 		62E1C266117B19B5009733AF /* boost */ = {isa = PBXFileReference; lastKnownFileType = folder; name = boost; path = /usr/local/boost_1_42_0/boost; sourceTree = "<absolute>"; };
 		62E1E2E5117B19D0009733AF /* armadillo */ = {isa = PBXFileReference; lastKnownFileType = text; name = armadillo; path = /usr/local/include/usr/include/armadillo; sourceTree = "<absolute>"; };
 		62E1E2E7117B19D0009733AF /* armadillo_bits */ = {isa = PBXFileReference; lastKnownFileType = folder; name = armadillo_bits; path = /usr/local/include/usr/include/armadillo_bits; sourceTree = "<absolute>"; };
-		62E1E3BD117B19D0009733AF /* armadillo_itpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = armadillo_itpp; path = /usr/local/include/usr/include/armadillo_itpp; sourceTree = "<absolute>"; };
 		62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = CxdNetTrainerModel.xcdatamodel; sourceTree = "<group>"; };
 		62E1E3F8117B246F009733AF /* CxdTrainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdTrainerModel.h; sourceTree = "<group>"; };
 		62E1E3F9117B2495009733AF /* CxdNetTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdNetTrainer.h; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				62E1E2E4117B19B7009733AF /* boost in Frameworks */,
 				62E1E2E6117B19D0009733AF /* armadillo in Frameworks */,
 				62E1E3BC117B19D0009733AF /* armadillo_bits in Frameworks */,
-				62E1E3BE117B19D0009733AF /* armadillo_itpp in Frameworks */,
 				62F5B229119E7BE900545D49 /* libCDGraph.dylib in Frameworks */,
 				6210AAE911ABEE5100139C9B /* CorePlot.framework in Frameworks */,
 				6217527611DCB134005D7D9B /* libCxdMatrix.dylib in Frameworks */,
@@ -219,7 +216,6 @@
 				62E1C266117B19B5009733AF /* boost */,
 				62E1E2E5117B19D0009733AF /* armadillo */,
 				62E1E2E7117B19D0009733AF /* armadillo_bits */,
-				62E1E3BD117B19D0009733AF /* armadillo_itpp */,
 				62F5B228119E7BE900545D49 /* libCDGraph.dylib */,
 				6210AAE811ABEE5100139C9B /* CorePlot.framework */,
 				6217527511DCB134005D7D9B /* libCxdMatrix.dylib */,

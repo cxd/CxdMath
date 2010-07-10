@@ -16,7 +16,6 @@
 		6258007D1178704E00108678 /* TestBackprop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6258007811786F7C00108678 /* TestBackprop.cpp */; };
 		627392D811E1ED5600517E9C /* armadillo in Frameworks */ = {isa = PBXBuildFile; fileRef = 627392D711E1ED5600517E9C /* armadillo */; };
 		627393D211E1ED5600517E9C /* armadillo_bits in Frameworks */ = {isa = PBXBuildFile; fileRef = 627392D911E1ED5600517E9C /* armadillo_bits */; };
-		627393D411E1ED5600517E9C /* armadillo_itpp in Frameworks */ = {isa = PBXBuildFile; fileRef = 627393D311E1ED5600517E9C /* armadillo_itpp */; };
 		627393F811E1EE0200517E9C /* CxdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 627A583A1171979F00409019 /* CxdMath.h */; };
 		627393F911E1EE0600517E9C /* CxdMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 50149BD909E781A5002DEE6A /* CxdMatrix.h */; };
 		627393FA11E1EE1200517E9C /* IReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C10803116B4A8F00CB5BA4 /* IReader.h */; };
@@ -176,7 +175,6 @@
 		6258007811786F7C00108678 /* TestBackprop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestBackprop.cpp; sourceTree = "<group>"; };
 		627392D711E1ED5600517E9C /* armadillo */ = {isa = PBXFileReference; lastKnownFileType = text; name = armadillo; path = /usr/local/include/usr/include/armadillo; sourceTree = "<absolute>"; };
 		627392D911E1ED5600517E9C /* armadillo_bits */ = {isa = PBXFileReference; lastKnownFileType = folder; name = armadillo_bits; path = /usr/local/include/usr/include/armadillo_bits; sourceTree = "<absolute>"; };
-		627393D311E1ED5600517E9C /* armadillo_itpp */ = {isa = PBXFileReference; lastKnownFileType = text; name = armadillo_itpp; path = /usr/local/include/usr/include/armadillo_itpp; sourceTree = "<absolute>"; };
 		627A57EF1171927600409019 /* IOperator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IOperator.hpp; sourceTree = "<group>"; };
 		627A57FC117193E600409019 /* MatrixOperator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MatrixOperator.hpp; sourceTree = "<group>"; };
 		627A583A1171979F00409019 /* CxdMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdMath.h; sourceTree = "<group>"; };
@@ -7210,7 +7208,6 @@
 				62F80F5D11706D5F009B209C /* Accelerate.framework in Frameworks */,
 				627392D811E1ED5600517E9C /* armadillo in Frameworks */,
 				627393D211E1ED5600517E9C /* armadillo_bits in Frameworks */,
-				627393D411E1ED5600517E9C /* armadillo_itpp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7256,7 +7253,6 @@
 				62CEC7AF1170639200F62C13 /* Accelerate.framework */,
 				627392D711E1ED5600517E9C /* armadillo */,
 				627392D911E1ED5600517E9C /* armadillo_bits */,
-				627393D311E1ED5600517E9C /* armadillo_itpp */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";

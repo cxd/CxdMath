@@ -217,13 +217,13 @@ namespace au {
 						 output rows = number of rows in Input matrix.
 						 output columns = number of columns in targets.
 						 */
-						_outputWeights = rand(MatrixOperator<Number>::_source.n_cols, outputCount)/MatrixOperator<Number>::_source.n_rows;
+						_outputWeights = randu(MatrixOperator<Number>::_source.n_cols, outputCount)/MatrixOperator<Number>::_source.n_rows;
 						_outputDeltaWeights = zeros(_outputWeights.n_rows, _outputWeights.n_cols);
 						/**
 						 Hidden Weights Rows = Number of Rows in Input Vector 
 						 Hidden Weights Cols = Number of Rows in Input Vector
 						 **/
-						mat tempW = rand(MatrixOperator<Number>::_source.n_cols, 1)/MatrixOperator<Number>::_source.n_rows;
+						mat tempW = randu(MatrixOperator<Number>::_source.n_cols, 1)/MatrixOperator<Number>::_source.n_rows;
 						_hiddenWeights = repmat(tempW, 1,MatrixOperator<Number>::_source.n_cols);
 						_hiddenDeltaWeights = zeros(_hiddenWeights.n_rows, _hiddenWeights.n_cols);
 					}
@@ -445,13 +445,44 @@ namespace au {
 							infile >> _learnRate;
 							infile.ignore();
 							infile >> _momentum;
+							infile.ignore();
+							int w, h = 0;
+							infile >> w;
+							infile.ignore();
+							infile >> h;
+							infile.ignore();
+							_outputWeights = Mat<Number>(w,h);
+							_isInitialised = GetMatrixFromStream(infile, _outputWeights, "BEGIN_OUTPUT_WEIGHTS", "END_OUTPUT_WEIGHTS");
+							w, h = 0;
+							infile >> w;
+							infile.ignore();
+							infile >> h;
+							infile.ignore();
+							_outputDeltaWeights = Mat<Number>(w,h);
+							_isInitialised &= GetMatrixFromStream(infile, _outputDeltaWeights, "BEGIN_OUTPUT_DELTA_WEIGHTS", "END_OUTPUT_DELTA_WEIGHTS");
+							w, h = 0;
+							infile >> w;
+							infile.ignore();
+							infile >> h;
+							infile.ignore();
+							_hiddenWeights = Mat<Number>(w,h);
+							_isInitialised &= GetMatrixFromStream(infile, _hiddenWeights, "BEGIN_HIDDEN_WEIGHTS", "END_HIDDEN_WEIGHTS");
+							w, h = 0;
+							infile >> w;
+							infile.ignore();
+							infile >> h;
+							infile.ignore();
+							_hiddenDeltaWeights = Mat<Number>(w,h);
+							_isInitialised &= GetMatrixFromStream(infile, _hiddenDeltaWeights, "BEGIN_HIDDEN_DELTA_WEIGHTS", "END_HIDDEN_DELTA_WEIGHTS");
 							infile.close();
+							/**
 							_outputWeights.load(_inputFile + "OW.mat");
 							_outputDeltaWeights.load(_inputFile + "ODW.mat");
 							_hiddenWeights.load(_inputFile + "HW.mat");
 							_hiddenDeltaWeights.load(_inputFile + "HDW.mat");
 							_isInitialised = true;
-							return true;
+							**/
+							return _isInitialised;
 						} 
 						catch(exception e)
 						{
@@ -461,9 +492,44 @@ namespace au {
 					}
 					
 					/**
+					 Read a matrix that is stored in the input stream between the start and end markers.
+					 **/
+					bool GetMatrixFromStream(std::istream& in, Mat<Number> &target, const string &startmarker, const string &endmarker)
+					{
+						string marker;
+						in >> marker;
+						in.ignore();
+						if (marker.compare(startmarker) != 0) {
+							return false;
+						}
+						bool exit = false;
+						int row = 0;
+						while(!exit && !in.eof())
+						{
+							string tmp;
+							getline(in, tmp);
+							if (tmp.compare(endmarker) == 0)
+							{
+								exit = true;
+								break;
+							}
+							std::vector<Number> nums;
+							int col = 0;
+							std::stringstream ss(tmp);
+							Number n;
+							while(ss >> n)
+							{
+								target(row, col++) = n;
+							}
+							row++;
+						}
+						return true;
+					}
+					
+					/**
 					 Write network properties to a file.
 					 **/
-					bool Write(string outputFile) 
+					bool Write(string outputFile)
 					{
 						try {
 							ofstream outfile(outputFile.c_str(), ofstream::out);
@@ -474,13 +540,37 @@ namespace au {
 							outfile << (int)_activationFn << endl;
 							outfile << _learnRate << endl;
 							outfile << _momentum << endl;
+							outfile << _outputWeights.n_rows << endl;
+							outfile << _outputWeights.n_cols << endl;
+							outfile << "BEGIN_OUTPUT_WEIGHTS" << endl;
+							_outputWeights.save(outfile, arma::raw_ascii);
+							outfile << "END_OUTPUT_WEIGHTS" << endl;
+							outfile << _outputDeltaWeights.n_rows << endl;
+							outfile << _outputWeights.n_cols << endl;
+							outfile << "BEGIN_OUTPUT_DELTA_WEIGHTS" << endl;
+							_outputDeltaWeights.save(outfile, arma::raw_ascii);
+							outfile << "END_OUTPUT_DELTA_WEIGHTS" << endl;
+							outfile << _hiddenWeights.n_rows << endl;
+							outfile << _hiddenWeights.n_cols << endl;
+							outfile << "BEGIN_HIDDEN_WEIGHTS" << endl;
+							_hiddenWeights.save(outfile, arma::raw_ascii);
+							outfile << "END_HIDDEN_WEIGHTS" << endl;
+							outfile << _hiddenDeltaWeights.n_rows << endl;
+							outfile << _hiddenDeltaWeights.n_cols << endl;
+							outfile << "BEGIN_HIDDEN_DELTA_WEIGHTS" << endl;
+							_hiddenDeltaWeights.save(outfile, arma::raw_ascii);
+							outfile << "END_HIDDEN_DELTA_WEIGHTS" << endl;
 							outfile.flush();
 							outfile.close();
+							
+							
+							/* NB: previously used separate files.
 							_outputWeights.save(outputFile + "OW.mat");
 							_outputDeltaWeights.save(outputFile + "ODW.mat");
 							_hiddenWeights.save(outputFile + "HW.mat");
 							_hiddenDeltaWeights.save(outputFile + "HDW.mat");
-							return true;
+							*/
+							 return true;
 						} 
 						catch(exception e)
 						{

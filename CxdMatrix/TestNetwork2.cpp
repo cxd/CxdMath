@@ -51,7 +51,7 @@ void TestNetwork2::testNetwork (void)
 	
 	
 	// training epochs
-	int epochs = 100000;
+	int epochs = 1000;
 	
 	McCullochPittsNeuralNetwork<double> network(trainSet,
 												trainTargets,

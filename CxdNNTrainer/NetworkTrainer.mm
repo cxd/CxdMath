@@ -299,10 +299,15 @@ private:
 {
 	int percent = sourceData.n_rows * (trainPercent*1.f)/(sourceData.n_rows*1.f);
 	int rows = sourceData.n_rows - percent;	
-	_trainData = sourceData.submat(0,0,rows,sourceData.n_cols-1);
-	_targetData = targetData.submat(0,0,rows,targetData.n_cols-1);
-	_testData = sourceData.submat(rows+1, 0, sourceData.n_rows-1,sourceData.n_cols-1);
-	_testTargetData = targetData.submat(rows+1, 0, targetData.n_rows-1,targetData.n_cols-1);
+	
+	// use a random permutation of the source data.
+	mat shuffledData = join_rows(sourceData, targetData);
+	shuffledData = shuffle(shuffledData, 0);
+	
+	_trainData = shuffledData.submat(0,0,rows,shuffledData.n_cols-2);
+	_targetData = shuffledData.submat(0,shuffledData.n_cols-1,rows,shuffledData.n_cols-1);
+	_testData = shuffledData.submat(rows+1, 0, shuffledData.n_rows-1,shuffledData.n_cols-2);
+	_testTargetData = shuffledData.submat(rows+1, shuffledData.n_cols-1, shuffledData.n_rows-1,shuffledData.n_cols-1);
 }
 
 

@@ -276,11 +276,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>62</integer>
+									<integer>5</integer>
+									<integer>4</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 317}, {287, 754}}</string>
+							<string>{{0, 0}, {287, 754}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -317,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>McCullochPittsNeuralNetwork.hpp</string>
+								<string>NormaliseMatrix.hpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>McCullochPittsNeuralNetwork.hpp</string>
+										<string>NormaliseMatrix.hpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>6203D46111E80D4E007CA8A3</string>
+										<string>6203D4D311E8523B007CA8A3</string>
 										<key>history</key>
 										<array>
 											<string>624012901168AEC6008BDB07</string>
@@ -401,7 +403,6 @@
 											<string>6203D3A611E7F040007CA8A3</string>
 											<string>6203D3A711E7F040007CA8A3</string>
 											<string>6203D3AA11E7F040007CA8A3</string>
-											<string>6203D3AC11E7F040007CA8A3</string>
 											<string>6203D3D811E7FD37007CA8A3</string>
 											<string>6203D3F711E7FFEC007CA8A3</string>
 											<string>6203D40011E8025F007CA8A3</string>
@@ -410,7 +411,9 @@
 											<string>6203D42E11E806C6007CA8A3</string>
 											<string>6203D43511E80703007CA8A3</string>
 											<string>6203D45B11E80C89007CA8A3</string>
-											<string>6203D45C11E80C89007CA8A3</string>
+											<string>6203D4B611E85108007CA8A3</string>
+											<string>6203D4B711E85108007CA8A3</string>
+											<string>6203D4B811E85108007CA8A3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

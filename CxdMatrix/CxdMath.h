@@ -41,6 +41,7 @@
 #include "SquaredError.hpp"
 #include "MeanSquaredError.hpp"
 #include "McCullochPittsNeuralNetwork.hpp"
+#include "EuclideanDistance.hpp"
 #endif
 
 #endif

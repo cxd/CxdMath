@@ -121,6 +121,23 @@ private:
 	[super dealloc];	
 }
 
+
+/**
+ Accessor for the test targets.
+ **/
+-(arma::mat) testTargets
+{
+	return _testTargetData;	
+}
+/**
+ Accessor for the test outputs.
+ **/
+-(arma::mat) testOutputs
+{
+	return _testOutputs;	
+}
+
+
 /**
  Train the network.
  **/
@@ -175,21 +192,21 @@ private:
 	testNet.Operate();
 	
 	// determine the error.
-	arma::mat output = htrans(testNet.getOutput());
+	_testOutputs = htrans(testNet.getOutput());
 	// sum the errors.
 	double totalMatched = 0.0; 
-	for(int i=0;i<output.n_rows;i++)
+	for(int i=0;i<_testOutputs.n_rows;i++)
 	{
-		for(int j=0;j<output.n_cols;j++)
+		for(int j=0;j<_testOutputs.n_cols;j++)
 		{
-			NSLog(@"Output: %f Expected: %f", output(i,j), _testTargetData(i, j));
-			if (output(i,j) == _testTargetData(i,j))
+			NSLog(@"Output: %f Expected: %f", _testOutputs(i,j), _testTargetData(i, j));
+			if (_testOutputs(i,j) == _testTargetData(i,j))
 			{
 				totalMatched += 1.0;	
 			}
 		}
 	}
-	totalMatched = totalMatched / (1.0*output.n_rows);
+	totalMatched = totalMatched / (1.0*_testOutputs.n_rows);
 	// average the error.
 	
 	//NSLog(@"Accuracy: %f", totalMatched);

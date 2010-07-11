@@ -16,6 +16,7 @@
 #import "DataView.h"
 #import "NetworkTrainer.h"
 #import "TrainErrorCurve.h"
+#import "TestPlotView.h"
 
 @interface MyDocument : NSPersistentDocument
 {
@@ -50,6 +51,9 @@
 	
 	TrainErrorCurve *errorPlot;
 	
+	TestPlotView *testPlot;
+	
+	NSPanel *testPlotPanel;
 	// accuracy
 	double accuracy;
 	
@@ -84,6 +88,9 @@
 @property(retain) IBOutlet NSProgressIndicator *progressBar;
 
 @property(retain) IBOutlet TrainErrorCurve *errorPlot;
+@property(retain) IBOutlet TestPlotView *testPlot;
+@property(retain) IBOutlet NSPanel *testPlotPanel;
+
 
 /**
  Initialise the model.

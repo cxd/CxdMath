@@ -53,6 +53,8 @@
 @synthesize progressBar;
 
 @synthesize errorPlot;
+@synthesize	testPlot;
+@synthesize testPlotPanel;
 
 - (id)init
 {
@@ -128,6 +130,14 @@
 	if (self.netProperty != nil)
 	{
 		[self.netProperty autorelease];	
+	}
+	if (self.testPlot != nil)
+	{
+		[self.testPlot autorelease];	
+	}
+	if (self.testPlotPanel != nil)
+	{
+		[self.testPlotPanel autorelease];
 	}
 	[super dealloc];
 }
@@ -655,6 +665,11 @@
 	if (val != nil) {
 		self.accuracy = [val intValue];
 		NSLog(@"Accuracy %f", self.accuracy);
+	}
+	if ((self.testPlotPanel != nil) && (self.testPlot != nil))
+	{
+		[self.testPlot onDisplayResults:self.trainer];
+		[self.testPlotPanel setIsVisible:YES];
 	}
 }
 

@@ -10,6 +10,8 @@
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		6207F44311859FF2009295CD /* RawDataPropertyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6207F44211859FF2009295CD /* RawDataPropertyData.m */; };
+		6209F3C111E9515B003FBCAB /* TestPlotView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6209F3C011E9515B003FBCAB /* TestPlotView.mm */; };
+		6209F3C411E95262003FBCAB /* BasePlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6209F3C311E95262003FBCAB /* BasePlotView.m */; };
 		6210AACF11ABED7000139C9B /* NetworkProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210AACE11ABED7000139C9B /* NetworkProperties.m */; };
 		6210AAE911ABEE5100139C9B /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6210AAE811ABEE5100139C9B /* CorePlot.framework */; };
 		6210AAEB11ABEE5700139C9B /* CorePlot.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6210AAE811ABEE5100139C9B /* CorePlot.framework */; };
@@ -31,7 +33,7 @@
 		62E1E3BC117B19D0009733AF /* armadillo_bits in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E1E2E7117B19D0009733AF /* armadillo_bits */; };
 		62E1E3CC117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 62E1E3CB117B1E84009733AF /* CxdNetTrainerModel.xcdatamodel */; };
 		62F5B229119E7BE900545D49 /* libCDGraph.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F5B228119E7BE900545D49 /* libCDGraph.dylib */; };
-		62F826F911AE8CD40009C16B /* ErrorPlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */; };
+		62F826F911AE8CD40009C16B /* PlotDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F826F811AE8CD40009C16B /* PlotDataSource.m */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.mm */; settings = {ATTRIBUTES = (); }; };
@@ -143,6 +145,10 @@
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		6207F44111859FF2009295CD /* RawDataPropertyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawDataPropertyData.h; sourceTree = "<group>"; };
 		6207F44211859FF2009295CD /* RawDataPropertyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawDataPropertyData.m; sourceTree = "<group>"; };
+		6209F3BF11E9515B003FBCAB /* TestPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPlotView.h; sourceTree = "<group>"; };
+		6209F3C011E9515B003FBCAB /* TestPlotView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestPlotView.mm; sourceTree = "<group>"; };
+		6209F3C211E95262003FBCAB /* BasePlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePlotView.h; sourceTree = "<group>"; };
+		6209F3C311E95262003FBCAB /* BasePlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePlotView.m; sourceTree = "<group>"; };
 		6210013D11A9576500224ABB /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = "../../CorePlot/core-plot/framework/CorePlot.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		6210AACD11ABED7000139C9B /* NetworkProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkProperties.h; sourceTree = "<group>"; };
 		6210AACE11ABED7000139C9B /* NetworkProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkProperties.m; sourceTree = "<group>"; };
@@ -183,8 +189,8 @@
 		62E1E3F8117B246F009733AF /* CxdTrainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdTrainerModel.h; sourceTree = "<group>"; };
 		62E1E3F9117B2495009733AF /* CxdNetTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdNetTrainer.h; sourceTree = "<group>"; };
 		62F5B228119E7BE900545D49 /* libCDGraph.dylib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCDGraph.dylib; path = /Users/cd/Projects/CDGraph/CDGraph/build/Debug/libCDGraph.dylib; sourceTree = "<absolute>"; };
-		62F826F711AE8CD40009C16B /* ErrorPlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorPlotDataSource.h; sourceTree = "<group>"; };
-		62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorPlotDataSource.m; sourceTree = "<group>"; };
+		62F826F711AE8CD40009C16B /* PlotDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotDataSource.h; sourceTree = "<group>"; };
+		62F826F811AE8CD40009C16B /* PlotDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotDataSource.m; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* CxdNNTrainer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CxdNNTrainer-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* CxdNNTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CxdNNTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -338,8 +344,12 @@
 			children = (
 				6210AAFC11ABEE9500139C9B /* TrainErrorCurve.h */,
 				6210AAFD11ABEE9500139C9B /* TrainErrorCurve.m */,
-				62F826F711AE8CD40009C16B /* ErrorPlotDataSource.h */,
-				62F826F811AE8CD40009C16B /* ErrorPlotDataSource.m */,
+				62F826F711AE8CD40009C16B /* PlotDataSource.h */,
+				62F826F811AE8CD40009C16B /* PlotDataSource.m */,
+				6209F3BF11E9515B003FBCAB /* TestPlotView.h */,
+				6209F3C011E9515B003FBCAB /* TestPlotView.mm */,
+				6209F3C211E95262003FBCAB /* BasePlotView.h */,
+				6209F3C311E95262003FBCAB /* BasePlotView.m */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -588,8 +598,10 @@
 				6288440E11A802BC0030533C /* NetworkTrainer.mm in Sources */,
 				6210AACF11ABED7000139C9B /* NetworkProperties.m in Sources */,
 				6210AAFE11ABEE9500139C9B /* TrainErrorCurve.m in Sources */,
-				62F826F911AE8CD40009C16B /* ErrorPlotDataSource.m in Sources */,
+				62F826F911AE8CD40009C16B /* PlotDataSource.m in Sources */,
 				621544D111B916C100E52008 /* NetTrainProjectConfig.m in Sources */,
+				6209F3C111E9515B003FBCAB /* TestPlotView.mm in Sources */,
+				6209F3C411E95262003FBCAB /* BasePlotView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

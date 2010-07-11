@@ -28,7 +28,6 @@ namespace au {
 				template <class Number> class NormaliseMatrix : public MatrixOperator<Number>
 				{
 					
-					
 				public:
 					
 					NormaliseMatrix(Mat<Number> source) : MatrixOperator<Number>::MatrixOperator(source)

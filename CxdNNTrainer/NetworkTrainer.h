@@ -31,6 +31,8 @@ using namespace arma;
 	arma::mat _targetData;
 	arma::mat _testData;
 	arma::mat _testTargetData;
+	
+	arma::mat _testOutputs;
 #endif
 	
 	DataViewDelegate *trainDataDelegate;
@@ -44,6 +46,19 @@ using namespace arma;
 }
 
 @property(assign) BOOL isTrained;
+
+#ifdef __cplusplus
+
+/**
+ Accessor for the test targets.
+ **/
+-(arma::mat) testTargets;
+/**
+ Accessor for the test outputs.
+ **/
+-(arma::mat) testOutputs;
+
+#endif
 
 /*
  Initialise by loading from file.

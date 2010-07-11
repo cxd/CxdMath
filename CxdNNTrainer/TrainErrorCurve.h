@@ -8,29 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CorePlot/CorePlot.h>
-#import "ErrorPlotDataSource.h"
+#import "PlotDataSource.h"
+#import "BasePlotView.h"
 
-@interface TrainErrorCurve : NSView<CPPlotSpaceDelegate> {
-	CPXYGraph *graph;
-	CPLayerHostingView *host; 
-	
-	CPXYAxis *xAxis;
-	CPXYAxis *yAxis;
-	
-	ErrorPlotDataSource *dataSource;
-	
+@interface TrainErrorCurve : BasePlotView {
+	PlotDataSource *dataSource;
 	NSUInteger previousSize;
-	
-	CPScatterPlot *dataSourceLinePlot;
-	
-	NSUInteger maxSamples;
-	NSUInteger maxYSample;
-	
-	NSDictionary *textAttributes;
-	
 }
 
-@property(retain) ErrorPlotDataSource *dataSource;
+@property(retain) PlotDataSource *dataSource;
 
 -(void)initGraph;
 

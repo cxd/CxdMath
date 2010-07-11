@@ -12,7 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100151"/>
+			<integer value="5"/>
+			<integer value="100176"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -805,6 +806,34 @@
 			<object class="NSCustomObject" id="116317975">
 				<string key="NSClassName">NetworkProperties</string>
 			</object>
+			<object class="NSWindowTemplate" id="203239776">
+				<int key="NSWindowStyleMask">8219</int>
+				<int key="NSWindowBacking">2</int>
+				<string key="NSWindowRect">{{157, 191}, {480, 270}}</string>
+				<int key="NSWTFlags">-1535639552</int>
+				<string key="NSWindowTitle">Test Plot</string>
+				<string key="NSWindowClass">NSPanel</string>
+				<nil key="NSViewClass"/>
+				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
+				<object class="NSView" key="NSWindowView" id="331831954">
+					<reference key="NSNextResponder"/>
+					<int key="NSvFlags">256</int>
+					<object class="NSMutableArray" key="NSSubviews">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSCustomView" id="1072971875">
+							<reference key="NSNextResponder" ref="331831954"/>
+							<int key="NSvFlags">274</int>
+							<string key="NSFrame">{{0, 20}, {480, 250}}</string>
+							<reference key="NSSuperview" ref="331831954"/>
+							<string key="NSClassName">NSView</string>
+						</object>
+					</object>
+					<string key="NSFrameSize">{480, 270}</string>
+					<reference key="NSSuperview"/>
+				</object>
+				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
+			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
@@ -1024,6 +1053,22 @@
 						</object>
 					</object>
 					<int key="connectionID">100174</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">testPlot</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="331831954"/>
+					</object>
+					<int key="connectionID">100178</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">testPlotPanel</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="203239776"/>
+					</object>
+					<int key="connectionID">100179</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1514,6 +1559,30 @@
 						<reference key="object" ref="513570832"/>
 						<reference key="parent" ref="856058527"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100175</int>
+						<reference key="object" ref="203239776"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="331831954"/>
+						</object>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Test Graph</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100176</int>
+						<reference key="object" ref="331831954"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1072971875"/>
+						</object>
+						<reference key="parent" ref="203239776"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100177</int>
+						<reference key="object" ref="1072971875"/>
+						<reference key="parent" ref="331831954"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1577,6 +1646,13 @@
 					<string>100169.IBPluginDependency</string>
 					<string>100170.IBPluginDependency</string>
 					<string>100171.IBPluginDependency</string>
+					<string>100175.IBEditorWindowLastContentRect</string>
+					<string>100175.IBPluginDependency</string>
+					<string>100175.IBWindowTemplateEditedContentRect</string>
+					<string>100175.NSWindowTemplate.visibleAtLaunch</string>
+					<string>100176.CustomClassName</string>
+					<string>100176.IBPluginDependency</string>
+					<string>100177.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
@@ -1647,6 +1723,13 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{21, 589}, {480, 270}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{21, 589}, {480, 270}}</string>
+					<boolean value="NO"/>
+					<string>TestPlotView</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{87, 144}, {800, 600}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{87, 144}, {800, 600}}</string>
@@ -1675,11 +1758,19 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100174</int>
+			<int key="maxID">100179</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">BasePlotView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">BasePlotView.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">DataView</string>
 					<string key="superclassName">NSView</string>
@@ -1761,6 +1852,8 @@
 							<string>rawDataProperty</string>
 							<string>rawDataView</string>
 							<string>targetDataView</string>
+							<string>testPlot</string>
+							<string>testPlotPanel</string>
 							<string>trainButton</string>
 							<string>trainDataView</string>
 						</object>
@@ -1774,6 +1867,8 @@
 							<string>RawDataPropertyData</string>
 							<string>DataView</string>
 							<string>DataView</string>
+							<string>TestPlotView</string>
+							<string>NSPanel</string>
 							<string>NSButton</string>
 							<string>DataView</string>
 						</object>
@@ -1790,6 +1885,8 @@
 							<string>rawDataProperty</string>
 							<string>rawDataView</string>
 							<string>targetDataView</string>
+							<string>testPlot</string>
+							<string>testPlotPanel</string>
 							<string>trainButton</string>
 							<string>trainDataView</string>
 						</object>
@@ -1826,6 +1923,14 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">targetDataView</string>
 								<string key="candidateClassName">DataView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">testPlot</string>
+								<string key="candidateClassName">TestPlotView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">testPlotPanel</string>
+								<string key="candidateClassName">NSPanel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">trainButton</string>
@@ -1947,8 +2052,16 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">TestPlotView</string>
+					<string key="superclassName">BasePlotView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">TestPlotView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">TrainErrorCurve</string>
-					<string key="superclassName">NSView</string>
+					<string key="superclassName">BasePlotView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">TrainErrorCurve.h</string>
@@ -2419,6 +2532,14 @@
 					<string key="className">NSOutlineView</string>
 					<string key="superclassName">NSTableView</string>
 					<reference key="sourceIdentifier" ref="1020051145"/>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSPanel</string>
+					<string key="superclassName">NSWindow</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSPanel.h</string>
+					</object>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSPersistentDocument</string>

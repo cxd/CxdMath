@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5073E0CB09E734E500EC74B6 /* CxdMatrix.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5073E0C409E734A800EC74B6 /* CxdMatrix.cp */; };
+		6203D54711E89038007CA8A3 /* EuclideanDistance.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6203D53E11E88BB1007CA8A3 /* EuclideanDistance.hpp */; };
 		620FF12F11704CF20024C9E4 /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620FF12011704BA50024C9E4 /* TestRunner.cpp */; };
 		620FF16911704F7E0024C9E4 /* libcppunit-1.12.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620FF16811704F7E0024C9E4 /* libcppunit-1.12.1.dylib */; };
 		620FF17A11704FC80024C9E4 /* TestCxdMatrixReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620FF17911704FC80024C9E4 /* TestCxdMatrixReader.cpp */; };
@@ -81,6 +82,7 @@
 		5073E0C609E734A800EC74B6 /* CxdMatrixProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = CxdMatrixProj.xcconfig; sourceTree = "<group>"; };
 		5073E0C709E734A800EC74B6 /* CxdMatrixTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = CxdMatrixTarget.xcconfig; sourceTree = "<group>"; };
 		50B2938909F016FC00694E55 /* CxdMatrixPriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CxdMatrixPriv.h; sourceTree = "<group>"; };
+		6203D53E11E88BB1007CA8A3 /* EuclideanDistance.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EuclideanDistance.hpp; sourceTree = "<group>"; };
 		620FF10D117044320024C9E4 /* CxdMatrixUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CxdMatrixUnitTest-Info.plist"; sourceTree = "<group>"; };
 		620FF11F11704BA50024C9E4 /* TestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunner.h; sourceTree = "<group>"; };
 		620FF12011704BA50024C9E4 /* TestRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRunner.cpp; sourceTree = "<group>"; };
@@ -7494,6 +7496,7 @@
 				62915B241179666000B6D557 /* MeanSquaredError.hpp */,
 				62915B391179692800B6D557 /* McCullochPittsNeuralNetwork.hpp */,
 				62B1F30211C4F30900E6795E /* MinMaxNormaliseMatrix.hpp */,
+				6203D53E11E88BB1007CA8A3 /* EuclideanDistance.hpp */,
 			);
 			name = Operator;
 			sourceTree = "<group>";
@@ -19754,6 +19757,7 @@
 				627393FC11E1EE1200517E9C /* MatrixReader.h in Headers */,
 				627393F911E1EE0600517E9C /* CxdMatrix.h in Headers */,
 				627393F811E1EE0200517E9C /* CxdMath.h in Headers */,
+				6203D54711E89038007CA8A3 /* EuclideanDistance.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

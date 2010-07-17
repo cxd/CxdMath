@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CxdNNTrainerCmd", "CxdNNTrainerCmd.vcproj", "{D284FA5F-FD46-43F2-AE19-0C2F0CB87F2A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CxdMatrix", "..\CxdMatrix\CxdMatrix.vcproj", "{897B0FAC-8876-4DA7-A0F5-D0C3CFB94171}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D284FA5F-FD46-43F2-AE19-0C2F0CB87F2A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D284FA5F-FD46-43F2-AE19-0C2F0CB87F2A}.Debug|Win32.Build.0 = Debug|Win32
+		{D284FA5F-FD46-43F2-AE19-0C2F0CB87F2A}.Release|Win32.ActiveCfg = Release|Win32
+		{D284FA5F-FD46-43F2-AE19-0C2F0CB87F2A}.Release|Win32.Build.0 = Release|Win32
+		{897B0FAC-8876-4DA7-A0F5-D0C3CFB94171}.Debug|Win32.ActiveCfg = Debug|Win32
+		{897B0FAC-8876-4DA7-A0F5-D0C3CFB94171}.Debug|Win32.Build.0 = Debug|Win32
+		{897B0FAC-8876-4DA7-A0F5-D0C3CFB94171}.Release|Win32.ActiveCfg = Release|Win32
+		{897B0FAC-8876-4DA7-A0F5-D0C3CFB94171}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

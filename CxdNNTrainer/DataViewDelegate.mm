@@ -81,6 +81,7 @@ using namespace au::id::Cxd::Operator;
 	} else {
 		// load using the built in functions of matrix lib.
 		try {
+			cout << "Load matrix from: " << [dataPath UTF8String] << endl;
 			matrix.load(std::string([dataPath UTF8String]), auto_detect);
 			return YES;
 		} catch(std::exception &e) {

@@ -200,9 +200,24 @@ private:
 		for(int j=0;j<_testOutputs.n_cols;j++)
 		{
 			NSLog(@"Output: %f Expected: %f", _testOutputs(i,j), _testTargetData(i, j));
-			if (_testOutputs(i,j) == _testTargetData(i,j))
+			
+			// find the closest match in the test data data for this column.
+			double min = INFINITY;
+			int minRow = -1;
+			for(int n=0;n<_testTargetData.n_rows;n++)
 			{
-				totalMatched += 1.0;	
+				if (_testTargetData(n,j) - _testOutputs(i,j) < min)
+				{
+					minRow = n;
+					min = _testTargetData(n,j) - _testOutputs(i,j); 
+				}
+			}
+			if (minRow != -1)
+			{
+				if (_testTargetData(minRow,j) == _testTargetData(i,j))
+				{
+					totalMatched += 1.0;	
+				}	
 			}
 		}
 	}

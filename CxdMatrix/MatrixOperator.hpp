@@ -32,7 +32,7 @@ namespace au {
 					/**
 					 Construct with source matrix.
 					 **/
-					MatrixOperator(Mat<Number> source)
+					MatrixOperator(Mat<Number> &source)
 					{
 						_source = source;
 					}
@@ -41,7 +41,7 @@ namespace au {
 						return _source;	
 					}
 					
-					Mat<Number> setSource(Mat<Number> src) {
+					void setSource(Mat<Number> &src) {
 						_source = src;	
 					}
 					

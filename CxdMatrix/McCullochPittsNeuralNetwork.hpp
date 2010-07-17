@@ -431,49 +431,50 @@ namespace au {
 						try {
 							ifstream infile(_inputFile.c_str(), ifstream::in);
 							infile >> _temperature;
-							infile.ignore();
 							infile >> _amplitude;
-							infile.ignore();
 							infile >> _range;
-							infile.ignore();
 							infile >> _bias;
-							infile.ignore();
 							int temp;
 							infile >> temp;
-							infile.ignore();
 							_activationFn = (ActivationFunction)temp;
 							infile >> _learnRate;
-							infile.ignore();
 							infile >> _momentum;
-							infile.ignore();
 							int w, h = 0;
 							infile >> w;
-							infile.ignore();
 							infile >> h;
-							infile.ignore();
 							_outputWeights = Mat<Number>(w,h);
 							_isInitialised = GetMatrixFromStream(infile, _outputWeights, "BEGIN_OUTPUT_WEIGHTS", "END_OUTPUT_WEIGHTS");
+							if (!_isInitialised)
+							{
+								cerr << "Failed to initialise output weights stream state bad = " << infile.bad() << endl;	
+							}
 							w, h = 0;
 							infile >> w;
-							infile.ignore();
 							infile >> h;
-							infile.ignore();
 							_outputDeltaWeights = Mat<Number>(w,h);
 							_isInitialised &= GetMatrixFromStream(infile, _outputDeltaWeights, "BEGIN_OUTPUT_DELTA_WEIGHTS", "END_OUTPUT_DELTA_WEIGHTS");
+							if (!_isInitialised)
+							{
+								cerr << "Failed to initialise output delta weights stream state bad = " << infile.bad() << endl;	
+							}
 							w, h = 0;
 							infile >> w;
-							infile.ignore();
 							infile >> h;
-							infile.ignore();
 							_hiddenWeights = Mat<Number>(w,h);
 							_isInitialised &= GetMatrixFromStream(infile, _hiddenWeights, "BEGIN_HIDDEN_WEIGHTS", "END_HIDDEN_WEIGHTS");
+							if (!_isInitialised)
+							{
+								cerr << "Failed to initialise hidden weights stream state bad = " << infile.bad() << endl;	
+							}
 							w, h = 0;
 							infile >> w;
-							infile.ignore();
 							infile >> h;
-							infile.ignore();
 							_hiddenDeltaWeights = Mat<Number>(w,h);
 							_isInitialised &= GetMatrixFromStream(infile, _hiddenDeltaWeights, "BEGIN_HIDDEN_DELTA_WEIGHTS", "END_HIDDEN_DELTA_WEIGHTS");
+							if (!_isInitialised)
+							{
+								cerr << "Failed to initialise hidden delta weights stream state bad = " << infile.bad() << endl;	
+							}
 							infile.close();
 							/**
 							_outputWeights.load(_inputFile + "OW.mat");
@@ -507,7 +508,8 @@ namespace au {
 						while(!exit && !in.eof())
 						{
 							string tmp;
-							getline(in, tmp);
+							in >> tmp;
+							in.ignore();
 							if (tmp.compare(endmarker) == 0)
 							{
 								exit = true;
@@ -517,7 +519,7 @@ namespace au {
 							int col = 0;
 							std::stringstream ss(tmp);
 							Number n;
-							while(ss >> n)
+							while(ss >> n && row < target.n_rows)
 							{
 								target(row, col++) = n;
 							}

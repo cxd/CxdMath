@@ -70,7 +70,7 @@ void TestNeuralNetwork::testNetwork (void)
 	int epochCount = network.TrainNetwork(epochs, 0.5);
 	cout << "Num Epochs: " << epochCount 
 	<< endl 
-	<< "Error: " << network.getSumSquaredError() 
+	<< "Error: " << network.getSumSquaredError()
 	<< endl;
 	
 	mat results(targets.n_rows, 2);

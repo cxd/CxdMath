@@ -13,6 +13,10 @@
 		620FF16911704F7E0024C9E4 /* libcppunit-1.12.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 620FF16811704F7E0024C9E4 /* libcppunit-1.12.1.dylib */; };
 		620FF17A11704FC80024C9E4 /* TestCxdMatrixReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 620FF17911704FC80024C9E4 /* TestCxdMatrixReader.cpp */; };
 		620FF2161170553F0024C9E4 /* libCxdMatrix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC09D05546B4700DB518D /* libCxdMatrix.dylib */; };
+		6214758E11F5B41400138EA3 /* CovarianceOperator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6214758D11F5B41400138EA3 /* CovarianceOperator.hpp */; };
+		621AE48611FA84F900288651 /* KNearestNeighbour.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 621AE48511FA84F900288651 /* KNearestNeighbour.hpp */; };
+		621AE4BB11FAA97900288651 /* TestNearestNeighbour.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 621AE4B611FAA88000288651 /* TestNearestNeighbour.cpp */; };
+		6228107811F47949007506E7 /* VarianceOperator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6228107711F47949007506E7 /* VarianceOperator.hpp */; };
 		62284C7E117C7C51001759EC /* TestNetwork2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62284C7B117C7C40001759EC /* TestNetwork2.cpp */; };
 		6258007D1178704E00108678 /* TestBackprop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6258007811786F7C00108678 /* TestBackprop.cpp */; };
 		627392D811E1ED5600517E9C /* armadillo in Frameworks */ = {isa = PBXBuildFile; fileRef = 627392D711E1ED5600517E9C /* armadillo */; };
@@ -42,6 +46,9 @@
 		62CEC7B01170639200F62C13 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEC7AF1170639200F62C13 /* Accelerate.framework */; };
 		62F80F5D11706D5F009B209C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEC7AF1170639200F62C13 /* Accelerate.framework */; };
 		62F828E81173316E003056F4 /* TestNeuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62F828E31173307E003056F4 /* TestNeuron.cpp */; };
+		62FF55E011F2F1E3005D437F /* TestEuclideanDistance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62FF55DF11F2F1E3005D437F /* TestEuclideanDistance.cpp */; };
+		62FF561D11F30FA1005D437F /* MahalanobisDistance.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62FF561C11F30FA1005D437F /* MahalanobisDistance.hpp */; };
+		62FF563511F32588005D437F /* TestMahalanobisDistance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62FF563011F32500005D437F /* TestMahalanobisDistance.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +177,11 @@
 		620FF1D4117051360024C9E4 /* XmlOutputter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XmlOutputter.h; path = /usr/local/include/cppunit/XmlOutputter.h; sourceTree = "<absolute>"; };
 		620FF1D5117051360024C9E4 /* XmlOutputterHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XmlOutputterHook.h; path = /usr/local/include/cppunit/XmlOutputterHook.h; sourceTree = "<absolute>"; };
 		620FF1E41170527C0024C9E4 /* testmatrix01.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testmatrix01.csv; path = /Users/cd/Projects/Math/CxdMatrix/testmatrix01.csv; sourceTree = "<absolute>"; };
+		6214758D11F5B41400138EA3 /* CovarianceOperator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CovarianceOperator.hpp; sourceTree = "<group>"; };
+		621AE48511FA84F900288651 /* KNearestNeighbour.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KNearestNeighbour.hpp; sourceTree = "<group>"; };
+		621AE4B511FAA88000288651 /* TestNearestNeighbour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNearestNeighbour.h; sourceTree = "<group>"; };
+		621AE4B611FAA88000288651 /* TestNearestNeighbour.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestNearestNeighbour.cpp; sourceTree = "<group>"; };
+		6228107711F47949007506E7 /* VarianceOperator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VarianceOperator.hpp; sourceTree = "<group>"; };
 		62284C7A117C7C40001759EC /* TestNetwork2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNetwork2.h; sourceTree = "<group>"; };
 		62284C7B117C7C40001759EC /* TestNetwork2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestNetwork2.cpp; sourceTree = "<group>"; };
 		62284C7F117C7CF7001759EC /* pima-indians-diabetes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pima-indians-diabetes.csv"; sourceTree = "<group>"; };
@@ -7197,6 +7209,11 @@
 		62F828E21173307E003056F4 /* TestNeuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNeuron.h; sourceTree = "<group>"; };
 		62F828E31173307E003056F4 /* TestNeuron.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestNeuron.cpp; sourceTree = "<group>"; };
 		62F8297711734344003056F4 /* BackPropogration.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BackPropogration.hpp; sourceTree = "<group>"; };
+		62FF55DE11F2F1E3005D437F /* TestEuclideanDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEuclideanDistance.h; sourceTree = "<group>"; };
+		62FF55DF11F2F1E3005D437F /* TestEuclideanDistance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestEuclideanDistance.cpp; sourceTree = "<group>"; };
+		62FF561C11F30FA1005D437F /* MahalanobisDistance.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MahalanobisDistance.hpp; sourceTree = "<group>"; };
+		62FF562F11F32500005D437F /* TestMahalanobisDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMahalanobisDistance.h; sourceTree = "<group>"; };
+		62FF563011F32500005D437F /* TestMahalanobisDistance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestMahalanobisDistance.cpp; sourceTree = "<group>"; };
 		D2AAC09D05546B4700DB518D /* libCxdMatrix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCxdMatrix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -7497,6 +7514,10 @@
 				62915B391179692800B6D557 /* McCullochPittsNeuralNetwork.hpp */,
 				62B1F30211C4F30900E6795E /* MinMaxNormaliseMatrix.hpp */,
 				6203D53E11E88BB1007CA8A3 /* EuclideanDistance.hpp */,
+				62FF561C11F30FA1005D437F /* MahalanobisDistance.hpp */,
+				6228107711F47949007506E7 /* VarianceOperator.hpp */,
+				6214758D11F5B41400138EA3 /* CovarianceOperator.hpp */,
+				621AE48511FA84F900288651 /* KNearestNeighbour.hpp */,
 			);
 			name = Operator;
 			sourceTree = "<group>";
@@ -7516,6 +7537,12 @@
 				62915BC411797E9300B6D557 /* TestNeuralNetwork.cpp */,
 				62284C7A117C7C40001759EC /* TestNetwork2.h */,
 				62284C7B117C7C40001759EC /* TestNetwork2.cpp */,
+				62FF55DE11F2F1E3005D437F /* TestEuclideanDistance.h */,
+				62FF55DF11F2F1E3005D437F /* TestEuclideanDistance.cpp */,
+				62FF562F11F32500005D437F /* TestMahalanobisDistance.h */,
+				62FF563011F32500005D437F /* TestMahalanobisDistance.cpp */,
+				621AE4B511FAA88000288651 /* TestNearestNeighbour.h */,
+				621AE4B611FAA88000288651 /* TestNearestNeighbour.cpp */,
 			);
 			name = Operator;
 			sourceTree = "<group>";
@@ -19758,6 +19785,10 @@
 				627393F911E1EE0600517E9C /* CxdMatrix.h in Headers */,
 				627393F811E1EE0200517E9C /* CxdMath.h in Headers */,
 				6203D54711E89038007CA8A3 /* EuclideanDistance.hpp in Headers */,
+				62FF561D11F30FA1005D437F /* MahalanobisDistance.hpp in Headers */,
+				6228107811F47949007506E7 /* VarianceOperator.hpp in Headers */,
+				6214758E11F5B41400138EA3 /* CovarianceOperator.hpp in Headers */,
+				621AE48611FA84F900288651 /* KNearestNeighbour.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -19832,6 +19863,9 @@
 				62915B011179545F00B6D557 /* TestBackpropMultiOutputs.cpp in Sources */,
 				62915BC71179800600B6D557 /* TestNeuralNetwork.cpp in Sources */,
 				62284C7E117C7C51001759EC /* TestNetwork2.cpp in Sources */,
+				62FF55E011F2F1E3005D437F /* TestEuclideanDistance.cpp in Sources */,
+				62FF563511F32588005D437F /* TestMahalanobisDistance.cpp in Sources */,
+				621AE4BB11FAA97900288651 /* TestNearestNeighbour.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

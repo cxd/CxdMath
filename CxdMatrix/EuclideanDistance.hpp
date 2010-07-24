@@ -68,6 +68,7 @@ namespace au {
 							case COLS:
 								return DistanceBetweenColumns();
 						}
+						return true;
 					}
 					
 				protected:
@@ -96,7 +97,7 @@ namespace au {
 					bool DistanceBetweenColumns() {
 						Mat<Number> delta = MatrixOperator<Number>::_source - _matrixFrom;
 						delta = square(delta);
-						MatrixOperator<Number>::_result = Mat<Number>(delta.n_cols, 1);
+						MatrixOperator<Number>::_result = Mat<Number>(delta.n_rows, 1);
 						MatrixOperator<Number>::_result.col(0) = sum(delta, 1);
 						MatrixOperator<Number>::_result = sqrt(MatrixOperator<Number>::_result);
 						return true;

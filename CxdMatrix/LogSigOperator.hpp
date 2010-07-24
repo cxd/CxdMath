@@ -60,9 +60,9 @@ namespace au {
 						 
 						 * amp - this is the amplitude to apply to the operation.
 						 **/
-						LogSigOperator(Mat<Number> h,
-									   Number temp,
-									   Number amp) 
+						LogSigOperator(Mat<Number> &h,
+									   Number &temp,
+									   Number &amp) 
 						: 
 						MatrixOperator<Number>::MatrixOperator(h)
 						{

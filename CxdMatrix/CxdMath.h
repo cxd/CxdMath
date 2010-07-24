@@ -42,6 +42,10 @@
 #include "MeanSquaredError.hpp"
 #include "McCullochPittsNeuralNetwork.hpp"
 #include "EuclideanDistance.hpp"
+#include "MahalanobisDistance.hpp"
+#include "VarianceOperator.hpp"
+#include "CovarianceOperator.hpp"
+#include "KNearestNeighbour.hpp"
 #endif
 
 #endif

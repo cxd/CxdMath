@@ -78,10 +78,10 @@ namespace au {
 					 
 					 
 					 **/
-					RangeSigOperator(Mat<Number> h,
-								   Number temp,
-								   Number amp,
-								   Number c)
+					RangeSigOperator(Mat<Number> &h,
+								   Number &temp,
+								   Number &amp,
+								   Number &c)
 					: 
 					MatrixOperator<Number>::MatrixOperator(h)
 					{

@@ -30,7 +30,7 @@ namespace au {
 					
 				public:
 					
-					NormaliseMatrix(Mat<Number> source) : MatrixOperator<Number>::MatrixOperator(source)
+					NormaliseMatrix(Mat<Number> &source) : MatrixOperator<Number>::MatrixOperator(source)
 					{
 					}
 					

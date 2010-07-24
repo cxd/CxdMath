@@ -3,7 +3,7 @@
  *  CxdMatrix
  *
  *  Created by Chris Davey on 11/04/10.
- *  Copyright 2010 none. All rights reserved.
+ *  Copyleft 2010 none. All rights reserved.
  *
  */
 

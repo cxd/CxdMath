@@ -131,7 +131,7 @@ using namespace au::id::Cxd::Operator;
 	NSLog(@"Original Size: [%d, %d] New size: [%d %d]",
 		  sourceMat.n_rows, sourceMat.n_cols, matrix.n_rows, matrix.n_cols);
 	if (fromSource) {
-		[self normalise];	
+		[self normaliseAndCentre];	
 	}
 	return YES;
 }
@@ -154,7 +154,7 @@ using namespace au::id::Cxd::Operator;
 	newMat.cols(matrix.n_cols, newMat.n_cols - 1) = sourceMat;
 	matrix = newMat;
 	if (fromSource) {
-		[self normalise];	
+		[self normaliseAndCentre];	
 	}
 	return YES;
 }
@@ -163,11 +163,14 @@ using namespace au::id::Cxd::Operator;
 /**
  Normalise the current matrix.
  **/
--(void)normalise
+-(void)normaliseAndCentre
 {
 	au::id::Cxd::Operator::MinMaxNormaliseMatrix<double> normOp(matrix);
 	normOp.Operate();
-	matrix = normOp.getResult();	
+	matrix = normOp.getResult();
+	CentreData<double> centre(matrix);
+	centre.Operate();
+	matrix = centre.getResult();
 }
 
 

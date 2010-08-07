@@ -11,6 +11,9 @@
 
 @implementation TestPlotView
 
+@synthesize column;
+
+
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -20,6 +23,7 @@
 		self.textAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:
 							   [NSFont boldSystemFontOfSize:12.0], NSFontAttributeName, 
 							   nil];
+		self.column = 0;
 	}
     return self;
 }
@@ -28,6 +32,7 @@
 {
 	self.maxSamples = 100;
 	self.maxYSample = 100;
+	self.column = 0;
 	[self initGraph];
 }
 
@@ -46,6 +51,9 @@
 	{
 		[netOutputLinePlot autorelease];	
 	}
+	// trainer ref is a weak reference.
+	trainerRef = NULL;
+	
 	[super dealloc];
 }
 
@@ -94,16 +102,15 @@
 {
 	arma::mat testTargets = [trainer testTargets];
 	arma::mat testOutputs = [trainer testOutputs];
-	
 	self.maxSamples = testTargets.n_rows;
-	
+	trainerRef = trainer;
 	for(int i=0;i<testTargets.n_rows;i++)
 	{
-		[targetDataSource accumulateY:[NSNumber numberWithDouble:testTargets(i,0)]];
+		[targetDataSource accumulateY:[NSNumber numberWithDouble:testTargets(i, self.column)]];
 	}
 	for(int i=0;i<testOutputs.n_rows;i++)
 	{
-		[outputDataSource accumulateY:[NSNumber numberWithDouble:testOutputs(i,0)]];
+		[outputDataSource accumulateY:[NSNumber numberWithDouble:testOutputs(i, self.column)]];
 	}
 	mustUpdate = YES;
 	
@@ -117,7 +124,6 @@
 		[self updatePlot:maxA];
 		// update twice to force view adjustment.
 		[self updatePlot:maxA];
-		
 	} else {
 		[self updatePlot:maxB];
 		// update twice to force view adjustment.
@@ -132,6 +138,23 @@
 	{
 		mustUpdate = NO;
 		[self.graph reloadData];
+	}
+}
+
+/**
+ receive changed selection.
+ **/
+-(IBAction)onSelectionChange:(id)sender
+{
+	if ([sender indexOfSelectedItem] >= 0)
+	{
+		self.column = [sender indexOfSelectedItem];
+		if (trainerRef != NULL)
+		{
+			[self onDisplayResults:trainerRef];
+		}
+		[self.graph reloadData];
+		[self setNeedsDisplay:YES];	
 	}
 }
 

@@ -19,6 +19,21 @@ using namespace arma;
 #import "DataViewDelegate.h"
 #import "ProjectNotifications.h"
 
+/**
+ 
+ The network trainer receives input data that has been prepared in the following way.
+ 
+ 1. It is normalised.
+ 2. Then it is centred around the mean.
+ 
+ To feed data from a unknown sample, 
+ it is possible to use the min/max vectors from the normalisation process
+ and the mean from the data centre process in order to convert the new sample
+ input vector into a vector that can be classified by the network once it has been trained.
+ 
+ 
+ **/
+
 @interface NetworkTrainer : NSObject {
 	
 #ifdef __cplusplus
@@ -59,6 +74,13 @@ using namespace arma;
 -(arma::mat) testOutputs;
 
 #endif
+
+
+/**
+ Get the number of output columns.
+ **/
+-(int)getOutputColumns;
+
 
 /*
  Initialise by loading from file.

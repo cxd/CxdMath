@@ -60,6 +60,13 @@
 	// error signal
 	double errorSignal;
 	
+	// number of columns to display in test view.
+	int numColumns;
+	NSMutableArray *plotColumns;
+	/**
+	 Test plot array controller.
+	 **/
+	NSArrayController *testArrayController;
 }
 
 @property(assign) double accuracy;
@@ -91,6 +98,21 @@
 @property(retain) IBOutlet TestPlotView *testPlot;
 @property(retain) IBOutlet NSPanel *testPlotPanel;
 
+/**
+ The number of possible columns available to the data source.
+ **/
+@property(assign) int numColumns;
+
+
+/**
+ The columns available to select in the plot window.
+ **/
+@property(retain) NSMutableArray *plotColumns;
+
+/**
+ Test plot array controller.
+ **/
+@property(retain) IBOutlet NSArrayController *testArrayController;
 
 /**
  Initialise the model.

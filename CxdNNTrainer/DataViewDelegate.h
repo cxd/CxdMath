@@ -50,7 +50,7 @@
 /**
  Normalise the current matrix.
  **/
--(void)normalise;
+-(void)normaliseAndCentre;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
 

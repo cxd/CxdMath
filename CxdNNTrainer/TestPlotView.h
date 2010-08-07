@@ -33,11 +33,24 @@ using namespace arma;
 	PlotDataSource *targetDataSource;
 	CPScatterPlot *netOutputLinePlot;
 	BOOL mustUpdate;
+	int column;
+	NetworkTrainer *trainerRef;
 }
+
+/**
+ Column associated with output to display.
+ **/
+@property(assign) int column;
+
 
 /**
  Display test results.
  **/
 -(void)onDisplayResults:(NetworkTrainer *)trainer;
+
+/**
+ receive changed selection.
+ **/
+-(IBAction)onSelectionChange:(id)sender;
 
 @end

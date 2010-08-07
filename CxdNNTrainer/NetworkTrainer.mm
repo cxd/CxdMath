@@ -103,9 +103,11 @@ private:
 	network = new au::id::Cxd::Operator::McCullochPittsNeuralNetwork<double>(_trainData,
 																			 _targetData,
 																			 rate,
-																			 m,
+																				 m,
+																			 RANGESIG,
 																			 1,
-																			 1,
+																			 2,
+																			 -1,
 																			 b);
 	return self;
 }
@@ -135,6 +137,13 @@ private:
 -(arma::mat) testOutputs
 {
 	return _testOutputs;	
+}
+
+/**
+ Get the number of output columns.
+ **/
+-(int)getOutputColumns {
+	return _testOutputs.n_cols;	
 }
 
 
@@ -183,8 +192,10 @@ private:
 												_testTargetData,
 												network->getLearnRate(),
 												network->getMomentum(),
+												RANGESIG,
 												network->getTemperature(),
 												network->getAmplitude(),
+												network->getRange(),
 												network->getBias());
 	testNet.InitialiseNetwork(network->getOutputWeights(), network->getHiddenWeights());
 	testNet.setAllowBackPropogation(false);
@@ -195,6 +206,7 @@ private:
 	_testOutputs = htrans(testNet.getOutput());
 	// sum the errors.
 	double totalMatched = 0.0; 
+	double totalRecords = 0.0;
 	for(int i=0;i<_testOutputs.n_rows;i++)
 	{
 		for(int j=0;j<_testOutputs.n_cols;j++)
@@ -216,12 +228,15 @@ private:
 			{
 				if (_testTargetData(minRow,j) == _testTargetData(i,j))
 				{
-					totalMatched += 1.0;	
+					totalMatched += (1.0 / (1.0*_testTargetData.n_cols));	
 				}	
 			}
+			totalRecords += 1.0;
 		}
+		NSLog(@"");
+		
 	}
-	totalMatched = totalMatched / (1.0*_testOutputs.n_rows);
+	totalMatched = totalMatched / totalRecords;
 	// average the error.
 	
 	//NSLog(@"Accuracy: %f", totalMatched);
@@ -336,10 +351,13 @@ private:
 	mat shuffledData = join_rows(sourceData, targetData);
 	shuffledData = shuffle(shuffledData, 0);
 	
-	_trainData = shuffledData.submat(0,0,rows,shuffledData.n_cols-2);
-	_targetData = shuffledData.submat(0,shuffledData.n_cols-1,rows,shuffledData.n_cols-1);
-	_testData = shuffledData.submat(rows+1, 0, shuffledData.n_rows-1,shuffledData.n_cols-2);
-	_testTargetData = shuffledData.submat(rows+1, shuffledData.n_cols-1, shuffledData.n_rows-1,shuffledData.n_cols-1);
+	int beginTargetCol = shuffledData.n_cols - targetData.n_cols;
+	int endTargetCol = beginTargetCol + targetData.n_cols - 1;
+	
+	_trainData = shuffledData.submat(0,  0, rows, beginTargetCol - 1);
+	_targetData = shuffledData.submat(0, beginTargetCol, rows, endTargetCol);
+	_testData = shuffledData.submat(rows+1, 0, shuffledData.n_rows-1,beginTargetCol - 1);
+	_testTargetData = shuffledData.submat(rows+1, beginTargetCol, shuffledData.n_rows-1, endTargetCol);
 }
 
 

@@ -56,6 +56,11 @@
 @synthesize	testPlot;
 @synthesize testPlotPanel;
 
+@synthesize numColumns;
+@synthesize plotColumns;
+
+@synthesize testArrayController;
+
 - (id)init
 {
     self = [super init];
@@ -63,7 +68,8 @@
     
         // Add your subclass-specific initialization here.
         // If an error occurs here, send a [self release] message and return nil.
-		
+		self.numColumns = 1;
+		self.plotColumns = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -139,6 +145,15 @@
 	{
 		[self.testPlotPanel autorelease];
 	}
+	if (self.testArrayController != nil)
+	{
+		[self.testArrayController autorelease];	
+	}
+	if (self.plotColumns != nil)
+	{
+		[self.plotColumns removeAllObjects];
+		[self.plotColumns autorelease];
+	}
 	[super dealloc];
 }
 
@@ -159,6 +174,9 @@
 	[self initialiseViewsFromModel];
 	[self subscribeToNotifications];
 	
+	self.numColumns = 1;
+	self.plotColumns = [[NSMutableArray alloc] init];
+	[self.plotColumns addObject:[NSNumber numberWithInt:0]];	
 }
 
 -(void)initialiseModel
@@ -654,6 +672,24 @@
 {
 	if (trainer == nil)
 		return;
+	
+	if (self.testArrayController != nil)
+	{
+		if ([[self.testArrayController content] count] > 0)
+		{
+			int numIndexes = [[self.testArrayController content] count]; 
+			NSIndexSet *set = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, numIndexes)];
+			[self.testArrayController removeObjectsAtArrangedObjectIndexes:set];	
+		}
+		for(int i=0;i<[trainer getOutputColumns];i++)
+		{
+			[self.testArrayController addObject:[NSNumber numberWithInt:i]];
+		}
+	}
+	
+	
+	
+	
 	self.accuracy = 0.0;
 	[trainer beginTestNetwork];
 }

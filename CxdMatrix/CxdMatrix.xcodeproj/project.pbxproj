@@ -40,10 +40,12 @@
 		627A58851171A01700409019 /* TestNormaliseMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 627A587A11719E7F00409019 /* TestNormaliseMatrix.cpp */; };
 		62915B011179545F00B6D557 /* TestBackpropMultiOutputs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62915AFA117952BA00B6D557 /* TestBackpropMultiOutputs.cpp */; };
 		62915BC71179800600B6D557 /* TestNeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62915BC411797E9300B6D557 /* TestNeuralNetwork.cpp */; };
+		629D35A711FC26C500301895 /* CentreData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 629D35A611FC26C500301895 /* CentreData.hpp */; };
 		62C10812116B4CA600CB5BA4 /* MatrixReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62C10810116B4CA600CB5BA4 /* MatrixReader.cpp */; };
 		62CE15D41170644000F62C13 /* pool_construct.inc in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF9071170643900F62C13 /* pool_construct.inc */; };
 		62CE15D51170644000F62C13 /* pool_construct_simple.inc in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF90B1170643900F62C13 /* pool_construct_simple.inc */; };
 		62CEC7B01170639200F62C13 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEC7AF1170639200F62C13 /* Accelerate.framework */; };
+		62DDA21712040CB3006B8111 /* StdDeviation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62DDA21512040CB3006B8111 /* StdDeviation.hpp */; };
 		62F80F5D11706D5F009B209C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CEC7AF1170639200F62C13 /* Accelerate.framework */; };
 		62F828E81173316E003056F4 /* TestNeuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62F828E31173307E003056F4 /* TestNeuron.cpp */; };
 		62FF55E011F2F1E3005D437F /* TestEuclideanDistance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62FF55DF11F2F1E3005D437F /* TestEuclideanDistance.cpp */; };
@@ -203,6 +205,7 @@
 		62915B391179692800B6D557 /* McCullochPittsNeuralNetwork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = McCullochPittsNeuralNetwork.hpp; sourceTree = "<group>"; };
 		62915BC311797E9300B6D557 /* TestNeuralNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNeuralNetwork.h; sourceTree = "<group>"; };
 		62915BC411797E9300B6D557 /* TestNeuralNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestNeuralNetwork.cpp; sourceTree = "<group>"; };
+		629D35A611FC26C500301895 /* CentreData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CentreData.hpp; sourceTree = "<group>"; };
 		62B1F30211C4F30900E6795E /* MinMaxNormaliseMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MinMaxNormaliseMatrix.hpp; sourceTree = "<group>"; };
 		62C10803116B4A8F00CB5BA4 /* IReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IReader.h; sourceTree = "<group>"; };
 		62C1080D116B4C2200CB5BA4 /* IWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWriter.h; sourceTree = "<group>"; };
@@ -7203,6 +7206,7 @@
 		62CEFFFC1170643A00F62C13 /* cover_operators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cover_operators.hpp; path = /usr/local/boost_1_42_0/boost/spirit/home/support/detail/integer/cover_operators.hpp; sourceTree = "<absolute>"; };
 		62CEFFFD1170643A00F62C13 /* endian.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = endian.hpp; path = /usr/local/boost_1_42_0/boost/spirit/home/support/detail/integer/endian.hpp; sourceTree = "<absolute>"; };
 		62CEFFFF1170643A00F62C13 /* char_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = char_traits.hpp; path = /usr/local/boost_1_42_0/boost/spirit/home/support/detail/lexer/char_traits.hpp; sourceTree = "<absolute>"; };
+		62DDA21512040CB3006B8111 /* StdDeviation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StdDeviation.hpp; sourceTree = "<group>"; };
 		62EE54381171D15D005DD715 /* LogSigOperator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LogSigOperator.hpp; sourceTree = "<group>"; };
 		62EE543C1171D178005DD715 /* RangeSigOperator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RangeSigOperator.hpp; sourceTree = "<group>"; };
 		62EE544A1171DBDB005DD715 /* McCullochPittsNeuron.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = McCullochPittsNeuron.hpp; sourceTree = "<group>"; };
@@ -7518,6 +7522,8 @@
 				6228107711F47949007506E7 /* VarianceOperator.hpp */,
 				6214758D11F5B41400138EA3 /* CovarianceOperator.hpp */,
 				621AE48511FA84F900288651 /* KNearestNeighbour.hpp */,
+				629D35A611FC26C500301895 /* CentreData.hpp */,
+				62DDA21512040CB3006B8111 /* StdDeviation.hpp */,
 			);
 			name = Operator;
 			sourceTree = "<group>";
@@ -19789,6 +19795,8 @@
 				6228107811F47949007506E7 /* VarianceOperator.hpp in Headers */,
 				6214758E11F5B41400138EA3 /* CovarianceOperator.hpp in Headers */,
 				621AE48611FA84F900288651 /* KNearestNeighbour.hpp in Headers */,
+				629D35A711FC26C500301895 /* CentreData.hpp in Headers */,
+				62DDA21712040CB3006B8111 /* StdDeviation.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

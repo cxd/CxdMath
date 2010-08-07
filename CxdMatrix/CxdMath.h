@@ -46,6 +46,8 @@
 #include "VarianceOperator.hpp"
 #include "CovarianceOperator.hpp"
 #include "KNearestNeighbour.hpp"
+#include "CentreData.hpp"
+#include "StdDeviation.hpp"
 #endif
 
 #endif

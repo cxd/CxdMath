@@ -68,6 +68,8 @@ namespace au {
 					{
 						CovarianceOperator<Number> covOp(_matrixFrom, MatrixOperator<Number>::_source);
 						covOp.Operate();
+						
+						// compute the pseudo inverse.
 						Mat<Number> CI = pinv(covOp.getResult());
 						
 						

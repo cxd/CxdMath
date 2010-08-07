@@ -217,13 +217,21 @@ namespace au {
 						 output rows = number of rows in Input matrix.
 						 output columns = number of columns in targets.
 						 */
+#ifdef ARMA_IPHONE
+						_outputWeights = rand(MatrixOperator<Number>::_source.n_cols, outputCount)/MatrixOperator<Number>::_source.n_rows;
+#else 
 						_outputWeights = randu(MatrixOperator<Number>::_source.n_cols, outputCount)/MatrixOperator<Number>::_source.n_rows;
+#endif
 						_outputDeltaWeights = zeros(_outputWeights.n_rows, _outputWeights.n_cols);
 						/**
 						 Hidden Weights Rows = Number of Rows in Input Vector 
 						 Hidden Weights Cols = Number of Rows in Input Vector
 						 **/
+#ifdef ARMA_IPHONE						
+						mat tempW = rand(MatrixOperator<Number>::_source.n_cols, 1)/MatrixOperator<Number>::_source.n_rows;
+#else
 						mat tempW = randu(MatrixOperator<Number>::_source.n_cols, 1)/MatrixOperator<Number>::_source.n_rows;
+#endif
 						_hiddenWeights = repmat(tempW, 1,MatrixOperator<Number>::_source.n_cols);
 						_hiddenDeltaWeights = zeros(_hiddenWeights.n_rows, _hiddenWeights.n_cols);
 					}
@@ -659,6 +667,20 @@ namespace au {
 					arma::mat getTargets()
 					{
 						return _targets;	
+					}
+					
+					/**
+					 Get the range.
+					 **/
+					Number getRange() {
+						return _range;	
+					}
+					
+					/**
+					 Define the range.
+					 **/
+					void setRange(Number r) {
+						_range = r;	
 					}
 					
 					/* Connect a slot to the signal which will be emitted whenever

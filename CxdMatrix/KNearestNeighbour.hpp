@@ -10,6 +10,8 @@
 #ifndef CXD_MATRIX_KNEAREST
 #define CXD_MATRIX_KNEAREST
 
+//#define DEBUG
+
 #include <vector>
 #include <algorithm>
 #include "IOperator.hpp"
@@ -264,6 +266,12 @@ namespace au {
 						return true;
 					}
 					
+					/**
+					 Access the neighbours.
+					 **/
+					vector<Neighbour<Number> > getNeighbours() {
+						return _neighbours;	
+					}
 					
 				protected:
 					
@@ -316,11 +324,12 @@ namespace au {
 					
 					Mat<Number> DistanceMahalanobis(Mat<Number> &A, Mat<Number> &B)
 					{
-						throw runtime_error("Mahalanobis distance is not yet implemented correctly use euclidean distance.");
 						MahalanobisDistance<Number> mdist(A, B);
 						mdist.Operate();
 						// potentially may need to rescale.
-						return mdist.getResult();
+						// convert the distance into a column vector of average distance.
+						Mat<Number> dist = sum(mdist.getResult(), 1)/mdist.getResult().n_cols;
+						return dist;
 					}
 					
 					

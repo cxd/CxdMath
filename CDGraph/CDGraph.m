@@ -72,6 +72,20 @@
 	return nil;
 }
 
+/**
+ Find a node using testing for whether the id of the supplied
+ object is equal to the data objects id in the node.
+ **/
+-(CDNode*)findNodeFor:(id)data
+{
+	for(CDNode *node in nodes)
+	{
+		if ([node.data isEqual:(id)data])
+			return node;
+	}
+	return nil;
+}
+
 
 -(CDEdge *)connect:(CDNode *)nodeFrom to:(CDNode *)nodeTo {
 	CDEdge *edge = [[CDEdge alloc] init];

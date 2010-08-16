@@ -43,7 +43,7 @@
 		629AA7D80F39AEC40049C127 /* CDLinkedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 629AA7D20F39AEC40049C127 /* CDLinkedNode.h */; };
 		629AA7D90F39AEC40049C127 /* CDLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AA7D30F39AEC40049C127 /* CDLinkedNode.m */; };
 		62A18483119E797900AF2CD1 /* CDGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B545850F3D8A410027ED8F /* CDGraph.framework */; };
-		62A18486119E798600AF2CD1 /* CDGraphLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6201CA0810552226000360C5 /* CDGraphLib.h */; };
+		62A18486119E798600AF2CD1 /* CDGraphLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6201CA0810552226000360C5 /* CDGraphLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62B543ED0F3D72C30027ED8F /* CDGraphVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B543EA0F3D72C30027ED8F /* CDGraphVisitor.h */; };
 		62B543F00F3D72C30027ED8F /* CDGraphVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B543EA0F3D72C30027ED8F /* CDGraphVisitor.h */; };
 		62B544010F3D77D60027ED8F /* CDEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B544000F3D77D60027ED8F /* CDEnums.h */; };
@@ -65,7 +65,7 @@
 		62B545AB0F3D8BA10027ED8F /* CDNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 6240D6010E4B118500C34154 /* CDNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62B545AC0F3D8BA10027ED8F /* CDQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B5449C0F3D80E70027ED8F /* CDQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62B545AD0F3D8BA10027ED8F /* CDStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 629AA7C90F39AE990049C127 /* CDStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62B545AE0F3D8BA10027ED8F /* TestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D11A180EEFD30800FA5746 /* TestObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62B545AE0F3D8BA10027ED8F /* TestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D11A180EEFD30800FA5746 /* TestObject.h */; settings = {ATTRIBUTES = (); }; };
 		62B545AF0F3D8BA20027ED8F /* TestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D11A180EEFD30800FA5746 /* TestObject.h */; };
 		62B545B00F3D8BA40027ED8F /* TestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D11A180EEFD30800FA5746 /* TestObject.h */; };
 		62B545B50F3D8BCA0027ED8F /* CDEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6240D61A0E4B178800C34154 /* CDEdge.m */; };

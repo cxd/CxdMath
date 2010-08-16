@@ -38,7 +38,16 @@
 
 -(CDNode *)remove:(NSPredicate *)predicate;
 
+/**
+ Find a node using a predicate.
+ **/
 -(CDNode*)find:(NSPredicate *)predicate;
+
+/**
+ Find a node using testing for whether the id of the supplied
+ object is equal to the data objects id in the node.
+ **/
+-(CDNode*)findNodeFor:(id)data;
 
 -(CDEdge*)connect:(CDNode *)nodeFrom to:(CDNode *)nodeTo;
 

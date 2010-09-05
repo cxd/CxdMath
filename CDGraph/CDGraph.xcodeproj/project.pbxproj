@@ -42,7 +42,6 @@
 		629AA7D70F39AEC40049C127 /* CDLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AA7D30F39AEC40049C127 /* CDLinkedNode.m */; };
 		629AA7D80F39AEC40049C127 /* CDLinkedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 629AA7D20F39AEC40049C127 /* CDLinkedNode.h */; };
 		629AA7D90F39AEC40049C127 /* CDLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 629AA7D30F39AEC40049C127 /* CDLinkedNode.m */; };
-		62A18483119E797900AF2CD1 /* CDGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B545850F3D8A410027ED8F /* CDGraph.framework */; };
 		62A18486119E798600AF2CD1 /* CDGraphLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6201CA0810552226000360C5 /* CDGraphLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62B543ED0F3D72C30027ED8F /* CDGraphVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B543EA0F3D72C30027ED8F /* CDGraphVisitor.h */; };
 		62B543F00F3D72C30027ED8F /* CDGraphVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B543EA0F3D72C30027ED8F /* CDGraphVisitor.h */; };
@@ -95,6 +94,7 @@
 		6201CA0810552226000360C5 /* CDGraphLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDGraphLib.h; sourceTree = "<group>"; };
 		6227FCB70F28756500D8D09F /* CDTestGraphClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestGraphClient.h; sourceTree = "<group>"; };
 		6227FCB80F28756500D8D09F /* CDTestGraphClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestGraphClient.m; sourceTree = "<group>"; };
+		623A1C5612335A9400160A95 /* CDGraph-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CDGraph-Info copy.plist"; sourceTree = "<group>"; };
 		6240D6010E4B118500C34154 /* CDNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDNode.h; sourceTree = "<group>"; };
 		6240D6020E4B118500C34154 /* CDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDNode.m; sourceTree = "<group>"; };
 		6240D6140E4B16BE00C34154 /* CDGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDGraph.h; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A18483119E797900AF2CD1 /* CDGraph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +200,7 @@
 				626F3A740F248F2600F566C4 /* libc.dylib */,
 				626F3A7C0F2490D400F566C4 /* Foundation.framework */,
 				62B545860F3D8A410027ED8F /* CDGraph-Info.plist */,
+				623A1C5612335A9400160A95 /* CDGraph-Info copy.plist */,
 			);
 			name = CDGraph;
 			sourceTree = "<group>";
@@ -748,12 +748,13 @@
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "CDGraph-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,

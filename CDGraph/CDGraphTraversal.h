@@ -6,7 +6,6 @@
 //  Copyright 2009 none. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 #import "CDGraphVisitor.h"
 #import "CDNode.h"

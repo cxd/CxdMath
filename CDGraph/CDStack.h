@@ -6,7 +6,6 @@
 //  Copyright 2009 none. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
 #import "CDLinkedNode.h"
 
 @interface CDStack : NSObject {

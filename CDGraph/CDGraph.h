@@ -25,9 +25,9 @@
 	
 }
 
-@property(assign) NSMutableArray *nodes;
+@property(retain) NSMutableArray *nodes;
 
-@property(assign) NSMutableArray *edges;
+@property(retain) NSMutableArray *edges;
 
 @property(assign) BOOL isBidirectional;
 
@@ -35,7 +35,15 @@
 
 -(CDNode *)add:(NSObject *)objData;
 
+/**
+ Remove a node where the predicate is true for the node data element.
+ **/
 -(CDNode *)remove:(NSPredicate *)predicate;
+
+/**
+ Remove an existing node.
+ **/
+-(BOOL)removeNode:(CDNode *)node;
 
 /**
  Find a node using a predicate.
@@ -58,6 +66,11 @@
  Find all edges from this node.
  **/
 -(NSMutableArray *)findEdges:(CDNode *)nodeFrom;
+
+/**
+ Locate the set of incoming connections from other nodes.
+ **/
+-(NSMutableArray *)findIncomingEdges:(CDNode *)target;
 
 -(void) encodeWithCoder: (NSCoder *) encoder;
 -(id) initWithCoder: (NSCoder *) decoder;

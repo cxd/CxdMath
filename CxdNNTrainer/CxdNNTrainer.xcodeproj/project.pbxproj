@@ -70,39 +70,39 @@
 			remoteGlobalIDString = 620FF12611704C590024C9E4;
 			remoteInfo = CxdTestRunner;
 		};
-		6264ADF411E0A050007541B6 /* PBXContainerItemProxy */ = {
+		62A7E27A126065C7003A617B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC0C705546C1D00DB518D;
+			remoteGlobalIDString = D2AAC0C705546C1D00DB518D /* libCDGraph.dylib */;
 			remoteInfo = CdADT;
 		};
-		6264ADF611E0A050007541B6 /* PBXContainerItemProxy */ = {
+		62A7E27C126065C7003A617B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 62E9DB720EEA78BE00DCE36C;
+			remoteGlobalIDString = 62E9DB720EEA78BE00DCE36C /* CDGraphTest.octest */;
 			remoteInfo = CDGraphTest;
 		};
-		6264ADF811E0A050007541B6 /* PBXContainerItemProxy */ = {
+		62A7E27E126065C7003A617B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 626F3A1B0F248AA100F566C4;
+			remoteGlobalIDString = 626F3A1B0F248AA100F566C4 /* libCDGraphStatic.a */;
 			remoteInfo = CDGraphStatic;
 		};
-		6264ADFA11E0A050007541B6 /* PBXContainerItemProxy */ = {
+		62A7E280126065C7003A617B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 626F3A850F24915700F566C4;
+			remoteGlobalIDString = 626F3A850F24915700F566C4 /* CDGraphTestConsole */;
 			remoteInfo = CDGraphTestConsole;
 		};
-		6264ADFC11E0A050007541B6 /* PBXContainerItemProxy */ = {
+		62A7E282126065C7003A617B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 62B545850F3D8A410027ED8F;
+			remoteGlobalIDString = 62B545850F3D8A410027ED8F /* CDGraph.framework */;
 			remoteInfo = CDGraph;
 		};
 /* End PBXContainerItemProxy section */
@@ -171,7 +171,7 @@
 		6248C57B117DC3C400204A78 /* ProjectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectItem.h; sourceTree = "<group>"; };
 		6248C57C117DC3C400204A78 /* ProjectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectItem.m; sourceTree = "<group>"; };
 		6248C58F117DC51A00204A78 /* ProjectItemType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectItemType.h; sourceTree = "<group>"; };
-		6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CDGraph.xcodeproj; path = ../CDGraph/CDGraph.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CDGraph.xcodeproj; path = ../../CDGraph/CDGraph/CDGraph.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6288440C11A802BC0030533C /* NetworkTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTrainer.h; sourceTree = "<group>"; };
 		6288440D11A802BC0030533C /* NetworkTrainer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkTrainer.mm; sourceTree = "<group>"; };
 		628D0C1F118EE9BA00EE6596 /* NetTrainResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetTrainResource.h; path = Model/NetTrainResource.h; sourceTree = "<group>"; };
@@ -379,18 +379,6 @@
 			name = ProjectView;
 			sourceTree = "<group>";
 		};
-		6264ADE611E0A050007541B6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6264ADF511E0A050007541B6 /* libCDGraph.dylib */,
-				6264ADF711E0A050007541B6 /* CDGraphTest.octest */,
-				6264ADF911E0A050007541B6 /* libCDGraphStatic.a */,
-				6264ADFB11E0A050007541B6 /* CDGraphTestConsole */,
-				6264ADFD11E0A050007541B6 /* CDGraph.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		6288440B11A8028A0030533C /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +414,18 @@
 				6217526A11DCB0FA005D7D9B /* CxdMatrix.xcodeproj */,
 			);
 			name = CxdMatrix;
+			sourceTree = "<group>";
+		};
+		62A7E273126065C7003A617B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62A7E27B126065C7003A617B /* libCDGraph.dylib */,
+				62A7E27D126065C7003A617B /* CDGraphTest.octest */,
+				62A7E27F126065C7003A617B /* libCDGraphStatic.a */,
+				62A7E281126065C7003A617B /* CDGraphTestConsole */,
+				62A7E283126065C7003A617B /* CDGraph.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		62E1E3CA117B1E2E009733AF /* DataModel */ = {
@@ -479,7 +479,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6264ADE611E0A050007541B6 /* Products */;
+					ProductGroup = 62A7E273126065C7003A617B /* Products */;
 					ProjectRef = 6264ADE511E0A050007541B6 /* CDGraph.xcodeproj */;
 				},
 				{
@@ -527,39 +527,39 @@
 			remoteRef = 6217527111DCB0FA005D7D9B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6264ADF511E0A050007541B6 /* libCDGraph.dylib */ = {
+		62A7E27B126065C7003A617B /* libCDGraph.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libCDGraph.dylib;
-			remoteRef = 6264ADF411E0A050007541B6 /* PBXContainerItemProxy */;
+			remoteRef = 62A7E27A126065C7003A617B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6264ADF711E0A050007541B6 /* CDGraphTest.octest */ = {
+		62A7E27D126065C7003A617B /* CDGraphTest.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CDGraphTest.octest;
-			remoteRef = 6264ADF611E0A050007541B6 /* PBXContainerItemProxy */;
+			remoteRef = 62A7E27C126065C7003A617B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6264ADF911E0A050007541B6 /* libCDGraphStatic.a */ = {
+		62A7E27F126065C7003A617B /* libCDGraphStatic.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCDGraphStatic.a;
-			remoteRef = 6264ADF811E0A050007541B6 /* PBXContainerItemProxy */;
+			remoteRef = 62A7E27E126065C7003A617B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6264ADFB11E0A050007541B6 /* CDGraphTestConsole */ = {
+		62A7E281126065C7003A617B /* CDGraphTestConsole */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CDGraphTestConsole;
-			remoteRef = 6264ADFA11E0A050007541B6 /* PBXContainerItemProxy */;
+			remoteRef = 62A7E280126065C7003A617B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6264ADFD11E0A050007541B6 /* CDGraph.framework */ = {
+		62A7E283126065C7003A617B /* CDGraph.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CDGraph.framework;
-			remoteRef = 6264ADFC11E0A050007541B6 /* PBXContainerItemProxy */;
+			remoteRef = 62A7E282126065C7003A617B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
